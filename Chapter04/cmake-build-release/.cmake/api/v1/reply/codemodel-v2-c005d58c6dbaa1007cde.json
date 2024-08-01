@@ -1,0 +1,168 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Chapter04",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AutoTypeCast::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AutoTypeCast-Release-d70ffd7774ca1e6cb378.json",
+					"name" : "AutoTypeCast",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "BadShallowCopy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-BadShallowCopy-Release-ec8e15335a81cc1db3a1.json",
+					"name" : "BadShallowCopy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CopyConstructor1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CopyConstructor1-Release-5c1ab9bb753dfd009f09.json",
+					"name" : "CopyConstructor1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CopyConstructor2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CopyConstructor2-Release-e44892c637c2357101f7.json",
+					"name" : "CopyConstructor2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FunctionAndClass::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FunctionAndClass-Release-4b13a8a32fd43fd94b7e.json",
+					"name" : "FunctionAndClass",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ImTypeCast::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ImTypeCast-Release-0872d80c90ae015aaf45.json",
+					"name" : "ImTypeCast",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MoveSemantics::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MoveSemantics-Release-2b198874fcc656ad7013.json",
+					"name" : "MoveSemantics",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RvalueRef1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RvalueRef1-Release-366f64d4f69be64026e8.json",
+					"name" : "RvalueRef1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RvalueRef2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RvalueRef2-Release-c79e7529a6e898c33186.json",
+					"name" : "RvalueRef2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RvalueRef3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RvalueRef3-Release-cc2f8b99f44865863aa4.json",
+					"name" : "RvalueRef3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ShallowCopy1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ShallowCopy1-Release-b33b54430610c9cb524d.json",
+					"name" : "ShallowCopy1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ShallowCopy2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ShallowCopy2-Release-0102f29543e5cb562129.json",
+					"name" : "ShallowCopy2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TempObject::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TempObject-Release-98e5adbb25d54fd10fb5.json",
+					"name" : "TempObject",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter04/cmake-build-release",
+		"source" : "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter04"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

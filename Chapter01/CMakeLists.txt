@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.26)
+project(Chapter01)
+
+set(CMAKE_CXX_STANDARD 20)
+
+add_executable(HelloCpp HelloCpp.cpp)
+add_executable(CoutSample CoutSample.cpp)
+add_executable(CoutString CoutString.cpp)
+add_executable(CinString CinString.cpp)
+add_executable(AutoSample AutoSample.cpp)
+add_executable(NewDeleteSample NewDeleteSample.cpp)
+add_executable(NewDeleteArray NewDeleteArray.cpp)
+add_executable(ReferenceType ReferenceType.cpp)
+add_executable(CallByReference CallByReference.cpp)
+add_executable(ReferenceSwap ReferenceSwap.cpp)
+add_executable(RvalueSample RvalueSample.cpp)
+add_executable(RangeBasedfor RangeBasedfor.cpp)

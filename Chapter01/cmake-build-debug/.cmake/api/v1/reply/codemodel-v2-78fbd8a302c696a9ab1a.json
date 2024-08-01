@@ -1,0 +1,159 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Chapter01",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AutoSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AutoSample-Debug-12994b2d6861d3c44154.json",
+					"name" : "AutoSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CallByReference::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CallByReference-Debug-b887b30ebe5475219991.json",
+					"name" : "CallByReference",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CinString::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CinString-Debug-cf50dc2d0f5e5c88caac.json",
+					"name" : "CinString",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CoutSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CoutSample-Debug-85292b38d246b444b2d3.json",
+					"name" : "CoutSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CoutString::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CoutString-Debug-c3c6068dd4c15889d5cb.json",
+					"name" : "CoutString",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HelloCpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HelloCpp-Debug-625dfff09bde94dcddd3.json",
+					"name" : "HelloCpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NewDeleteArray::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NewDeleteArray-Debug-defe6aa6bcab5384a36c.json",
+					"name" : "NewDeleteArray",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NewDeleteSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NewDeleteSample-Debug-67ffefffffdecae89a8e.json",
+					"name" : "NewDeleteSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RangeBasedfor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RangeBasedfor-Debug-d06a260bbb11e3494011.json",
+					"name" : "RangeBasedfor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ReferenceSwap::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ReferenceSwap-Debug-8af338dbd4033c1e7f36.json",
+					"name" : "ReferenceSwap",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ReferenceType::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ReferenceType-Debug-00d2b0294f340842d02e.json",
+					"name" : "ReferenceType",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RvalueSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RvalueSample-Debug-6ec4860c3cf6b2f70b55.json",
+					"name" : "RvalueSample",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter01/cmake-build-debug",
+		"source" : "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter01"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
