@@ -13,17 +13,32 @@
  *
  */
 
-CMyString::CMyString(char* _str)
-//        : m_pszData(NULL), // 오래된 책들은 NULL을 쓴다.
-        : m_pszData(_str),
-          m_nLength(0)
+CMyString::CMyString()
 {
-    cout << "CMyString(char*)" << endl;
+
+}
+
+CMyString::CMyString(const char* _str)
+{
+    cout << "CMyString(const char*)" << endl;
 }
 
 CMyString::CMyString(const CMyString& rhs)
 {
     strcpy(this->m_pszData, rhs.m_pszData);
+}
+
+CMyString::CMyString(CMyString&& rhs)
+        : m_pszData(nullptr),
+          m_nLength(0)
+{
+    cout << "CMyString 이동생성자 호출" << endl;
+
+    m_pszData = rhs.m_pszData;
+    m_nLength = rhs.m_nLength;
+
+    rhs.m_pszData = nullptr;
+    rhs.m_nLength = 0;
 }
 
 CMyString::~CMyString()
@@ -84,3 +99,5 @@ CMyString& CMyString::operator=(const CMyString& rhs)
     strcpy(this->m_pszData, rhs.m_pszData);
     return *this;
 }
+
+

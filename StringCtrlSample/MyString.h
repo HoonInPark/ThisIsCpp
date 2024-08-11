@@ -9,8 +9,11 @@
 class CMyString
 {
 public:
-    explicit CMyString(char* _str);
+    CMyString();
+    explicit CMyString(const char* _str); // 변환생성자
     CMyString(const CMyString& rhs);
+    CMyString(CMyString&& rhs);
+
     ~CMyString();
 
 private:

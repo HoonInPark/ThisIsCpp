@@ -4,7 +4,7 @@
 #include "bits/stdc++.h"
 
 #define ADDING_DISTRUCTOR 0
-#define MODIFY_TEST_FUNC_PARAM 1
+#define MODIFY_TEST_FUNC_PARAM 0
 #define PREVENT_IMPLICIT_CONV_CONSTRUCTOR 0
 
 class CTestData
