@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "StringCtrlSample::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-StringCtrlSample-Debug-0f7e10d51ae319bef3ce.json",
+					"jsonFile" : "target-StringCtrlSample-Debug-e38751f08f0b03831f52.json",
 					"name" : "StringCtrlSample",
 					"projectIndex" : 0
 				}
@@ -55,6 +55,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 7
 	}
 }

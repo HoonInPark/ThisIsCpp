@@ -3,6 +3,7 @@
 //
 #include <bits/stdc++.h>
 #include "MyString.h"
+using namespace std;
 
 #define MY_CODE_MUST_BE_CORRECTED 0
 #define DANGER_FOR_DEL_ORIGIN_WHEN_CMYSTRING_CLASS_FREED 0
@@ -32,7 +33,7 @@ CMyString::CMyString(CMyString&& rhs)
         : m_pszData(nullptr),
           m_nLength(0)
 {
-    cout << "CMyString 이동생성자 호출" << endl;
+    cout << "CMyString Move Constructor Called" << endl;
 
     m_pszData = rhs.m_pszData;
     m_nLength = rhs.m_nLength;
@@ -99,5 +100,3 @@ CMyString& CMyString::operator=(const CMyString& rhs)
     strcpy(this->m_pszData, rhs.m_pszData);
     return *this;
 }
-
-

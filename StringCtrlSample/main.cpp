@@ -9,7 +9,7 @@
 CMyString TestFunc()
 {
     CMyString strTest("TestFunc() return");
-    cout << strTest << endl;
+    std::cout << strTest << std::endl;
 
     return strTest;
 }

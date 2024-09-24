@@ -1,15 +1,8 @@
-# ninja log v5
-785	843	1722498835548957216	StringCtrlSample	28b623360b6710fb
-0	48	1720395827616922189	build.ninja	850d615f3ae29446
-4	784	1722498835489646905	CMakeFiles/StringCtrlSample.dir/main.cpp.o	35839fb2bafd6e5c
-4	765	1722498798685578483	CMakeFiles/StringCtrlSample.dir/MyString.cpp.o	961fc89d6c462449
-4	714	1722498948967922674	CMakeFiles/StringCtrlSample.dir/main.cpp.o	35839fb2bafd6e5c
-714	756	1722498949015172654	StringCtrlSample	28b623360b6710fb
-4	830	1722499006176335414	CMakeFiles/StringCtrlSample.dir/main.cpp.o	35839fb2bafd6e5c
-830	874	1722499006229451953	StringCtrlSample	28b623360b6710fb
-4	923	1722499808954942718	CMakeFiles/StringCtrlSample.dir/MyString.cpp.o	961fc89d6c462449
-4	938	1722499808971256009	CMakeFiles/StringCtrlSample.dir/main.cpp.o	35839fb2bafd6e5c
-938	1040	1722499809074820601	StringCtrlSample	28b623360b6710fb
-4	862	1722500900984502507	CMakeFiles/StringCtrlSample.dir/main.cpp.o	35839fb2bafd6e5c
-5	868	1722500900991124033	CMakeFiles/StringCtrlSample.dir/MyString.cpp.o	961fc89d6c462449
-868	975	1722500901100852731	StringCtrlSample	28b623360b6710fb
+# ninja log v6
+10	722	1725403868087392826	CMakeFiles/StringCtrlSample.dir/main.cpp.o	cf1a5f04a963e5af
+11	725	1725403868088134406	CMakeFiles/StringCtrlSample.dir/MyString.cpp.o	a482b938f2db7ab2
+725	2199	1725403868801913450	StringCtrlSample	102c344189ab74e4
+20	790	1727185182356066918	CMakeFiles/StringCtrlSample.dir/MyString.cpp.o	a482b938f2db7ab2
+790	2261	1727185183126447161	StringCtrlSample	102c344189ab74e4
+6	629	1727185222754239693	CMakeFiles/StringCtrlSample.dir/MyString.cpp.o	a482b938f2db7ab2
+629	659	1727185223377162464	StringCtrlSample	102c344189ab74e4

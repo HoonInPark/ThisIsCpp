@@ -84,6 +84,6 @@ int main()
 
     cout << "* Before ******************" << endl;
     b = TestFunc(20);
-    cout << "* After ******************r" << endl;
+    cout << "* After *******************" << endl;
     CTestData c(b);
 }
