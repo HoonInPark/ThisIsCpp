@@ -1,3 +1,12 @@
-//
-// Created by Changjoon Lee on 2024. 10. 1..
-//
+#include "bits/stdc++.h"
+using namespace std;
+
+int Foo(int inVal)
+{
+    return inVal;
+}
+
+int main()
+{
+    int&& r_val_ref = Foo(1);
+}

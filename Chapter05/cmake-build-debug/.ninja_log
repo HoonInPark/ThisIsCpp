@@ -1,0 +1,15 @@
+# ninja log v6
+6	829	1727784344353008205	CMakeFiles/Chapter05.dir/OperOverArithmetic.cpp.o	189c16f2faa0890f
+6	639	1727784388615238616	CMakeFiles/Chapter05.dir/OperOverAssign.cpp.o	73a4fca3a83b8d3c
+0	586	1727784479533682566	CMakeFiles/OperOverAssign.dir/OperOverAssign.cpp.o	a7ee03ff821c3e3e
+0	593	1727784479533378277	CMakeFiles/OperOverArithmetic.dir/OperOverArithmetic.cpp.o	2aa6c7a369759fa6
+588	623	1727784480121540027	OperOverAssign	8e30c140e5990f79
+593	624	1727784480126923937	OperOverArithmetic	f5fc1504cf76435c
+9	764	1727785284148902924	CMakeFiles/OperOverAssign.dir/OperOverAssign.cpp.o	a7ee03ff821c3e3e
+764	854	1727785284903511794	OperOverAssign	8e30c140e5990f79
+7	117	1727858437091523577	CMakeFiles/OperOverAssign.dir/OperOverAssign.cpp.o	a7ee03ff821c3e3e
+14	741	1727858695288754271	CMakeFiles/OperOverAssign.dir/OperOverAssign.cpp.o	a7ee03ff821c3e3e
+741	827	1727858696016369188	OperOverAssign	8e30c140e5990f79
+18	635	1727860042640565110	CMakeFiles/OperOverAssign.dir/OperOverAssign.cpp.o	a7ee03ff821c3e3e
+7	620	1727860055203788605	CMakeFiles/OperOverAssign.dir/OperOverAssign.cpp.o	a7ee03ff821c3e3e
+621	649	1727860055817327267	OperOverAssign	8e30c140e5990f79
