@@ -1,5 +1,6 @@
-#include <bits/stdc++.h>
 #include "MyString.h"
+#include <bits/stdc++.h>
+using namespace std;
 
 //void TestFunc(const CMyString& param)
 //{
@@ -16,5 +17,11 @@ CMyString TestFunc()
 
 int main()
 {
-    TestFunc();
+    CMyString strLeft("Hello"), strRight("World"), strResult;
+    strResult = strLeft + strRight;
+    cout << strResult << endl;
+
+    cout << strLeft << endl;
+    strLeft += CMyString("World");
+    cout << strLeft << endl;
 }

@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_StringCtrlSample: phony || .
 
 build CMakeFiles/StringCtrlSample.dir/main.cpp.o: CXX_COMPILER__StringCtrlSample_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/StringCtrlSample/main.cpp || cmake_object_order_depends_target_StringCtrlSample
   DEP_FILE = CMakeFiles/StringCtrlSample.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/StringCtrlSample.dir
   OBJECT_FILE_DIR = CMakeFiles/StringCtrlSample.dir
   TARGET_COMPILE_PDB = CMakeFiles/StringCtrlSample.dir/
@@ -59,7 +59,7 @@ build CMakeFiles/StringCtrlSample.dir/main.cpp.o: CXX_COMPILER__StringCtrlSample
 
 build CMakeFiles/StringCtrlSample.dir/MyString.cpp.o: CXX_COMPILER__StringCtrlSample_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/StringCtrlSample/MyString.cpp || cmake_object_order_depends_target_StringCtrlSample
   DEP_FILE = CMakeFiles/StringCtrlSample.dir/MyString.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6 -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/StringCtrlSample.dir
   OBJECT_FILE_DIR = CMakeFiles/StringCtrlSample.dir
   TARGET_COMPILE_PDB = CMakeFiles/StringCtrlSample.dir/
@@ -74,7 +74,7 @@ build CMakeFiles/StringCtrlSample.dir/MyString.cpp.o: CXX_COMPILER__StringCtrlSa
 # Link the executable StringCtrlSample
 
 build StringCtrlSample: CXX_EXECUTABLE_LINKER__StringCtrlSample_Debug CMakeFiles/StringCtrlSample.dir/main.cpp.o CMakeFiles/StringCtrlSample.dir/MyString.cpp.o
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -mmacosx-version-min=14.6
   OBJECT_DIR = CMakeFiles/StringCtrlSample.dir
   POST_BUILD = :
   PRE_LINK = :
