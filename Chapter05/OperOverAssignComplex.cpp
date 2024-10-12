@@ -1,6 +1,10 @@
+//
+// Created by Changjoon Lee on 2024. 10. 7..
+//
 #include "bits/stdc++.h"
-
 using namespace std;
+
+#define TEAR_DOWN_OPER 1
 
 class CMyData
 {
@@ -23,6 +27,16 @@ public:
         m_pnData = new int(*rhs.m_pnData);
         return *this;
     }
+    CMyData& operator+=(const CMyData& rhs)
+    {
+        int *pnNewData = new int(*m_pnData);
+        *pnNewData += *rhs.m_pnData;
+
+        delete m_pnData;
+        m_pnData = pnNewData;
+
+        return *this;
+    }
 
 private:
     int* m_pnData{nullptr};
@@ -31,8 +45,8 @@ private:
 int main()
 {
     CMyData a(0), b(5), c(10);
-    a = b = c;
+    a += b;
+    a += c;
+
     cout << a << endl;
-    cout << b << endl;
-    cout << c << endl;
 }

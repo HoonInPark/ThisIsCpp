@@ -142,6 +142,32 @@ OperOverAssign/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssign.dir/build.make CMakeFiles/OperOverAssign.dir/build
 .PHONY : OperOverAssign/fast
 
+#=============================================================================
+# Target rules for targets named OperOverAssignComplex
+
+# Build rule for target.
+OperOverAssignComplex: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OperOverAssignComplex
+.PHONY : OperOverAssignComplex
+
+# fast build rule for target.
+OperOverAssignComplex/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignComplex.dir/build.make CMakeFiles/OperOverAssignComplex.dir/build
+.PHONY : OperOverAssignComplex/fast
+
+#=============================================================================
+# Target rules for targets named OperOverAssignMove
+
+# Build rule for target.
+OperOverAssignMove: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OperOverAssignMove
+.PHONY : OperOverAssignMove
+
+# fast build rule for target.
+OperOverAssignMove/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignMove.dir/build.make CMakeFiles/OperOverAssignMove.dir/build
+.PHONY : OperOverAssignMove/fast
+
 OperOverArithmetic.o: OperOverArithmetic.cpp.o
 .PHONY : OperOverArithmetic.o
 
@@ -190,6 +216,54 @@ OperOverAssign.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssign.dir/build.make CMakeFiles/OperOverAssign.dir/OperOverAssign.cpp.s
 .PHONY : OperOverAssign.cpp.s
 
+OperOverAssignComplex.o: OperOverAssignComplex.cpp.o
+.PHONY : OperOverAssignComplex.o
+
+# target to build an object file
+OperOverAssignComplex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignComplex.dir/build.make CMakeFiles/OperOverAssignComplex.dir/OperOverAssignComplex.cpp.o
+.PHONY : OperOverAssignComplex.cpp.o
+
+OperOverAssignComplex.i: OperOverAssignComplex.cpp.i
+.PHONY : OperOverAssignComplex.i
+
+# target to preprocess a source file
+OperOverAssignComplex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignComplex.dir/build.make CMakeFiles/OperOverAssignComplex.dir/OperOverAssignComplex.cpp.i
+.PHONY : OperOverAssignComplex.cpp.i
+
+OperOverAssignComplex.s: OperOverAssignComplex.cpp.s
+.PHONY : OperOverAssignComplex.s
+
+# target to generate assembly for a file
+OperOverAssignComplex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignComplex.dir/build.make CMakeFiles/OperOverAssignComplex.dir/OperOverAssignComplex.cpp.s
+.PHONY : OperOverAssignComplex.cpp.s
+
+OperOverAssignMove.o: OperOverAssignMove.cpp.o
+.PHONY : OperOverAssignMove.o
+
+# target to build an object file
+OperOverAssignMove.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignMove.dir/build.make CMakeFiles/OperOverAssignMove.dir/OperOverAssignMove.cpp.o
+.PHONY : OperOverAssignMove.cpp.o
+
+OperOverAssignMove.i: OperOverAssignMove.cpp.i
+.PHONY : OperOverAssignMove.i
+
+# target to preprocess a source file
+OperOverAssignMove.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignMove.dir/build.make CMakeFiles/OperOverAssignMove.dir/OperOverAssignMove.cpp.i
+.PHONY : OperOverAssignMove.cpp.i
+
+OperOverAssignMove.s: OperOverAssignMove.cpp.s
+.PHONY : OperOverAssignMove.s
+
+# target to generate assembly for a file
+OperOverAssignMove.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignMove.dir/build.make CMakeFiles/OperOverAssignMove.dir/OperOverAssignMove.cpp.s
+.PHONY : OperOverAssignMove.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -200,12 +274,20 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... OperOverArithmetic"
 	@echo "... OperOverAssign"
+	@echo "... OperOverAssignComplex"
+	@echo "... OperOverAssignMove"
 	@echo "... OperOverArithmetic.o"
 	@echo "... OperOverArithmetic.i"
 	@echo "... OperOverArithmetic.s"
 	@echo "... OperOverAssign.o"
 	@echo "... OperOverAssign.i"
 	@echo "... OperOverAssign.s"
+	@echo "... OperOverAssignComplex.o"
+	@echo "... OperOverAssignComplex.i"
+	@echo "... OperOverAssignComplex.s"
+	@echo "... OperOverAssignMove.o"
+	@echo "... OperOverAssignMove.i"
+	@echo "... OperOverAssignMove.s"
 .PHONY : help
 
 

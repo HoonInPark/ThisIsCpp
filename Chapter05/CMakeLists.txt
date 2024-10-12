@@ -5,3 +5,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(OperOverArithmetic OperOverArithmetic.cpp)
 add_executable(OperOverAssign OperOverAssign.cpp)
+add_executable(OperOverAssignComplex OperOverAssignComplex.cpp)
+add_executable(OperOverAssignMove OperOverAssignMove.cpp)

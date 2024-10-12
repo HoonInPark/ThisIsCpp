@@ -18,7 +18,7 @@ public:
         cout << "CMyData(const CMyData &)" << endl;
     }
 
-    CMyData(const CMyData&& _rhs) noexcept
+    CMyData(const CMyData&& _rhs)
             : m_nData(_rhs.m_nData)
     {
         cout << "CMyData(const CMyData &&)" << endl;

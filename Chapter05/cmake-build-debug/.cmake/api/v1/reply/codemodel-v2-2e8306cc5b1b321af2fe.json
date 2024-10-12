@@ -16,7 +16,9 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2,
+						3
 					]
 				}
 			],
@@ -32,7 +34,9 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2,
+						3
 					]
 				}
 			],
@@ -50,6 +54,20 @@
 					"id" : "OperOverAssign::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-OperOverAssign-Debug-a410e08e7c5f06d7c092.json",
 					"name" : "OperOverAssign",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OperOverAssignComplex::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OperOverAssignComplex-Debug-9451aed6fb99dd75212f.json",
+					"name" : "OperOverAssignComplex",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OperOverAssignMove::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OperOverAssignMove-Debug-a39ae46de6d97b0709ea.json",
+					"name" : "OperOverAssignMove",
 					"projectIndex" : 0
 				}
 			]
