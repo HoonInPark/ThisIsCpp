@@ -18,7 +18,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				}
 			],
@@ -36,7 +37,8 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4
 					]
 				}
 			],
@@ -47,6 +49,13 @@
 					"id" : "OperOverArithmetic::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-OperOverArithmetic-Debug-cd04b6b456b58690c54f.json",
 					"name" : "OperOverArithmetic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OperOverArray::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OperOverArray-Debug-301bdbfc52d00b01301f.json",
+					"name" : "OperOverArray",
 					"projectIndex" : 0
 				},
 				{

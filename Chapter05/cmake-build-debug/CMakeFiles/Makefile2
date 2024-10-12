@@ -67,6 +67,7 @@ all: CMakeFiles/OperOverArithmetic.dir/all
 all: CMakeFiles/OperOverAssign.dir/all
 all: CMakeFiles/OperOverAssignComplex.dir/all
 all: CMakeFiles/OperOverAssignMove.dir/all
+all: CMakeFiles/OperOverArray.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -78,6 +79,7 @@ clean: CMakeFiles/OperOverArithmetic.dir/clean
 clean: CMakeFiles/OperOverAssign.dir/clean
 clean: CMakeFiles/OperOverAssignComplex.dir/clean
 clean: CMakeFiles/OperOverAssignMove.dir/clean
+clean: CMakeFiles/OperOverArray.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -113,7 +115,7 @@ CMakeFiles/OperOverArithmetic.dir/clean:
 CMakeFiles/OperOverAssign.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssign.dir/build.make CMakeFiles/OperOverAssign.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssign.dir/build.make CMakeFiles/OperOverAssign.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter05/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target OperOverAssign"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter05/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target OperOverAssign"
 .PHONY : CMakeFiles/OperOverAssign.dir/all
 
 # Build rule for subdir invocation for target.
@@ -139,7 +141,7 @@ CMakeFiles/OperOverAssign.dir/clean:
 CMakeFiles/OperOverAssignComplex.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignComplex.dir/build.make CMakeFiles/OperOverAssignComplex.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignComplex.dir/build.make CMakeFiles/OperOverAssignComplex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter05/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target OperOverAssignComplex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter05/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target OperOverAssignComplex"
 .PHONY : CMakeFiles/OperOverAssignComplex.dir/all
 
 # Build rule for subdir invocation for target.
@@ -165,7 +167,7 @@ CMakeFiles/OperOverAssignComplex.dir/clean:
 CMakeFiles/OperOverAssignMove.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignMove.dir/build.make CMakeFiles/OperOverAssignMove.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignMove.dir/build.make CMakeFiles/OperOverAssignMove.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter05/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target OperOverAssignMove"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter05/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target OperOverAssignMove"
 .PHONY : CMakeFiles/OperOverAssignMove.dir/all
 
 # Build rule for subdir invocation for target.
@@ -183,6 +185,32 @@ OperOverAssignMove: CMakeFiles/OperOverAssignMove.dir/rule
 CMakeFiles/OperOverAssignMove.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignMove.dir/build.make CMakeFiles/OperOverAssignMove.dir/clean
 .PHONY : CMakeFiles/OperOverAssignMove.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/OperOverArray.dir
+
+# All Build rule for target.
+CMakeFiles/OperOverArray.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverArray.dir/build.make CMakeFiles/OperOverArray.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverArray.dir/build.make CMakeFiles/OperOverArray.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter05/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target OperOverArray"
+.PHONY : CMakeFiles/OperOverArray.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/OperOverArray.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter05/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OperOverArray.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter05/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/OperOverArray.dir/rule
+
+# Convenience name for target.
+OperOverArray: CMakeFiles/OperOverArray.dir/rule
+.PHONY : OperOverArray
+
+# clean rule for target.
+CMakeFiles/OperOverArray.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverArray.dir/build.make CMakeFiles/OperOverArray.dir/clean
+.PHONY : CMakeFiles/OperOverArray.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -168,6 +168,19 @@ OperOverAssignMove/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverAssignMove.dir/build.make CMakeFiles/OperOverAssignMove.dir/build
 .PHONY : OperOverAssignMove/fast
 
+#=============================================================================
+# Target rules for targets named OperOverArray
+
+# Build rule for target.
+OperOverArray: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OperOverArray
+.PHONY : OperOverArray
+
+# fast build rule for target.
+OperOverArray/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverArray.dir/build.make CMakeFiles/OperOverArray.dir/build
+.PHONY : OperOverArray/fast
+
 OperOverArithmetic.o: OperOverArithmetic.cpp.o
 .PHONY : OperOverArithmetic.o
 
@@ -191,6 +204,30 @@ OperOverArithmetic.s: OperOverArithmetic.cpp.s
 OperOverArithmetic.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverArithmetic.dir/build.make CMakeFiles/OperOverArithmetic.dir/OperOverArithmetic.cpp.s
 .PHONY : OperOverArithmetic.cpp.s
+
+OperOverArray.o: OperOverArray.cpp.o
+.PHONY : OperOverArray.o
+
+# target to build an object file
+OperOverArray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverArray.dir/build.make CMakeFiles/OperOverArray.dir/OperOverArray.cpp.o
+.PHONY : OperOverArray.cpp.o
+
+OperOverArray.i: OperOverArray.cpp.i
+.PHONY : OperOverArray.i
+
+# target to preprocess a source file
+OperOverArray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverArray.dir/build.make CMakeFiles/OperOverArray.dir/OperOverArray.cpp.i
+.PHONY : OperOverArray.cpp.i
+
+OperOverArray.s: OperOverArray.cpp.s
+.PHONY : OperOverArray.s
+
+# target to generate assembly for a file
+OperOverArray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OperOverArray.dir/build.make CMakeFiles/OperOverArray.dir/OperOverArray.cpp.s
+.PHONY : OperOverArray.cpp.s
 
 OperOverAssign.o: OperOverAssign.cpp.o
 .PHONY : OperOverAssign.o
@@ -273,12 +310,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OperOverArithmetic"
+	@echo "... OperOverArray"
 	@echo "... OperOverAssign"
 	@echo "... OperOverAssignComplex"
 	@echo "... OperOverAssignMove"
 	@echo "... OperOverArithmetic.o"
 	@echo "... OperOverArithmetic.i"
 	@echo "... OperOverArithmetic.s"
+	@echo "... OperOverArray.o"
+	@echo "... OperOverArray.i"
+	@echo "... OperOverArray.s"
 	@echo "... OperOverAssign.o"
 	@echo "... OperOverAssign.i"
 	@echo "... OperOverAssign.s"
