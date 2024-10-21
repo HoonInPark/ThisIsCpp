@@ -21,9 +21,15 @@ public:
 public:
     int SetString(const char* pszParam = "");
 
-    const char* GetString() const;
+    [[nodiscard]] inline const char* GetString() const
+    {
+        return m_pszData;
+    }
 
-    int GetLenth() const;
+    [[nodiscard]] inline int GetLength() const
+    {
+        return m_nLength;
+    }
 
     void Release();
 
@@ -35,12 +41,17 @@ public:
 
     CMyString& operator+=(const CMyString& rhs);
 
-    operator const char*(void) { return m_pszData; }
+    operator const char*() { return m_pszData; }
+
+    char& operator[](int nIndex);
+    char operator[](int nIndex) const;
+
+    int operator==(const CMyString& rhs);
+    int operator!=(const CMyString& rhs);
 
 private:
     char* m_pszData{nullptr};
     int m_nLength{0};
-
 };
 
 

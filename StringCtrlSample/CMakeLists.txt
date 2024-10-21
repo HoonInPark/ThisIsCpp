@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(StringCtrlSample main.cpp
         MyString.h
-        MyString.cpp)
+        MyString.cpp
+        MyStringEx.h
+        MyStringEx.cpp)

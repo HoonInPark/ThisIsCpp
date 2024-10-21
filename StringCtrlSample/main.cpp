@@ -1,4 +1,4 @@
-#include "MyString.h"
+#include "MyStringEx.h"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -7,21 +7,18 @@ using namespace std;
 //    cout << param.GetString() << endl;
 //}
 
-CMyString TestFunc()
+void TestFunc(const CMyString& strParam)
 {
-    CMyString strTest("TestFunc() return");
-    std::cout << strTest << std::endl;
-
-    return strTest;
+    cout << strParam[0] << endl;
+    cout << strParam[strParam.GetLength() - 1] << endl;
 }
 
 int main()
 {
-    CMyString strLeft("Hello"), strRight("World"), strResult;
-    strResult = strLeft + strRight;
-    cout << strResult << endl;
+    CMyStringEx strTest;
+    strTest.SetString("I am a boy.");
+    cout << strTest << endl;
 
-    cout << strLeft << endl;
-    strLeft += CMyString("World");
-    cout << strLeft << endl;
+    int nIndex = strTest.Find("am");
+    cout << "Index : " << nIndex << endl;
 }

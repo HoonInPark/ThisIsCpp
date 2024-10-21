@@ -89,15 +89,6 @@ int CMyString::SetString(const char* pszParam)
     return nLength;
 }
 
-const char* CMyString::GetString() const
-{
-    return m_pszData;
-}
-
-int CMyString::GetLenth() const
-{
-    return m_nLength;
-}
 
 void CMyString::Release()
 {
@@ -135,7 +126,7 @@ int CMyString::Append(const char* pszParam)
 
 CMyString& CMyString::operator=(const CMyString& rhs)
 {
-    m_nLength = rhs.GetLenth();
+    m_nLength = rhs.GetLength();
     if (!m_pszData)
         m_pszData = new char[m_nLength + 1];
 
@@ -160,4 +151,56 @@ CMyString& CMyString::operator+=(const CMyString& rhs)
 {
     Append(rhs.m_pszData);
     return *this;
+}
+
+char& CMyString::operator[](int nIndex)
+{
+    cout << "operator[]" << endl;
+
+    const int&& nGap = GetLength() - nIndex - 1;
+    if (nGap >= 0)
+        return m_pszData[nIndex];
+    if (nIndex < 0)
+        return m_pszData[0];
+
+    const char* psDataTmp = m_pszData;
+    m_pszData = new char[m_nLength - nGap + 1];
+    strcpy(m_pszData, psDataTmp);
+    delete[] psDataTmp;
+
+    auto pStartPosToWrite = m_pszData + sizeof(char) * m_nLength;
+    auto&& nSizeOfChar = sizeof(char);
+    for (int i = 0; i < -nGap; ++i)
+        *(pStartPosToWrite + i * nSizeOfChar) = 0;
+
+    m_nLength = m_nLength - nGap - 1;
+
+    return m_pszData[nIndex];
+}
+
+char CMyString::operator[](int nIndex) const
+{
+    cout << "operator[] const" << endl;
+    if (GetLength() - nIndex - 1 >= 0)
+        return m_pszData[nIndex];
+
+    return m_pszData[nIndex];
+}
+
+int CMyString::operator==(const CMyString& rhs)
+{
+    if (m_pszData != nullptr && rhs.m_pszData != nullptr)
+        if (strcmp(m_pszData, rhs.m_pszData) == 0)
+            return 1;
+
+    return 0;
+}
+
+int CMyString::operator!=(const CMyString& rhs)
+{
+    if (m_pszData != nullptr && rhs.m_pszData != nullptr)
+        if (strcmp(m_pszData, rhs.m_pszData) == 0)
+            return 0;
+
+    return 1;
 }
