@@ -1,3 +1,8 @@
 /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter06/cmake-build-debug/CMakeFiles/InheritSample.dir
+/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter06/cmake-build-debug/CMakeFiles/MethodOver1.dir
+/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter06/cmake-build-debug/CMakeFiles/MethodOver2.dir
+/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter06/cmake-build-debug/CMakeFiles/InheritAndContructor1.dir
+/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter06/cmake-build-debug/CMakeFiles/InheritAndContructor2.dir
+/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter06/cmake-build-debug/CMakeFiles/SelectContructor.dir
 /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter06/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter06/cmake-build-debug/CMakeFiles/rebuild_cache.dir

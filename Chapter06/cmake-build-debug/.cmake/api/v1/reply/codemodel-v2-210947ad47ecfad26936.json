@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Chapter06",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "InheritAndContructor1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-InheritAndContructor1-Debug-9aa92a64b716bcb8f6bc.json",
+					"name" : "InheritAndContructor1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "InheritAndContructor2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-InheritAndContructor2-Debug-afcf038ce93c8ebf61b4.json",
+					"name" : "InheritAndContructor2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "InheritSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-InheritSample-Debug-6e7b630f38064818da27.json",
+					"name" : "InheritSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MethodOver1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MethodOver1-Debug-d0e6756c6bf570a54d55.json",
+					"name" : "MethodOver1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MethodOver2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MethodOver2-Debug-5a0a54c87f9023837e03.json",
+					"name" : "MethodOver2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SelectContructor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SelectContructor-Debug-06b6cdbcf2255d7483f3.json",
+					"name" : "SelectContructor",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter06/cmake-build-debug",
+		"source" : "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter06"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
