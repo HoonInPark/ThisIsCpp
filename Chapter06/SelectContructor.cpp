@@ -4,6 +4,8 @@
 #include "bits/stdc++.h"
 using namespace std;
 
+#define BEFORE_ABBREVIATED 0
+
 class CMyData
 {
 public:
@@ -15,6 +17,7 @@ public:
 class CMyDataEx : public CMyData
 {
 public:
+#if BEFORE_ABBREVIATED
     CMyDataEx() { cout << "CMyDataEx()" << endl; }
 
     /*
@@ -29,6 +32,13 @@ public:
     {
         cout << "CMyData(double)" << endl;
     }
+#else
+    /*
+     * 이렇게 하면 부모 클래스의 생성자를 그대로 쓸 수 있다.
+     * 즉, CMyDataEx를 생성하면 부모 클래스의 생성자가 그 인수에 맞게 호출됨.
+     * */
+    using CMyData::CMyData;
+#endif
 };
 
 int main()
