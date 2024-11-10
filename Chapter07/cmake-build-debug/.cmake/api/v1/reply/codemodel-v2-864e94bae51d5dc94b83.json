@@ -1,0 +1,141 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Chapter07",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AdtSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AdtSample-Debug-f272fc8db31861580524.json",
+					"name" : "AdtSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CastSample1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CastSample1-Debug-37124f91e4c4780d22d4.json",
+					"name" : "CastSample1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CastSample2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CastSample2-Debug-a1ece0c94e232ead4886.json",
+					"name" : "CastSample2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "EarlyBinding::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-EarlyBinding-Debug-8e9bf37e88cfa0f673a6.json",
+					"name" : "EarlyBinding",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "InterfaceSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-InterfaceSample-Debug-dc4d6ee6034b7442749d.json",
+					"name" : "InterfaceSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LateBinding::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LateBinding-Debug-761b2e18440cd065fe44.json",
+					"name" : "LateBinding",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PureVirtualSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PureVirtualSample-Debug-00af3bed5c8988447796.json",
+					"name" : "PureVirtualSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "VirtualDestructor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VirtualDestructor-Debug-349abcb863131fde2719.json",
+					"name" : "VirtualDestructor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "VirtualFunction::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VirtualFunction-Debug-2555bb14dec62786012f.json",
+					"name" : "VirtualFunction",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vTableSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vTableSample-Debug-2558b3fd5be6f0b7857f.json",
+					"name" : "vTableSample",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter07/cmake-build-debug",
+		"source" : "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter07"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
