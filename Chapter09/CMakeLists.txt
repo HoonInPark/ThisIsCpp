@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.29)
+project(Chapter09)
+
+set(CMAKE_CXX_STANDARD 26)
+
+add_executable(TemplateSample TemplateSample.cpp)
+add_executable(TemplateArray TemplateArray.cpp)
+add_executable(TemplateMember TemplateMember.cpp)
+add_executable(TemplateParam TemplateParam.cpp)
+add_executable(TemplateFunction TemplateFunction.cpp)
+add_executable(TemplateSpecial TemplateSpecial.cpp)
+add_executable(TemplateInherit TemplateInherit.cpp)
+add_executable(AutoPtrSample AutoPtrSample.cpp)
+add_executable(SharedPtrSample SharedPtrSample.cpp)
+add_executable(SharedPtrArray SharedPtrArray.cpp)
+add_executable(UniquePtrSample UniquePtrSample.cpp)
+add_executable(WeakPtrSample WeakPtrSample.cpp)

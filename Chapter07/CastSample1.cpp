@@ -38,10 +38,15 @@ public:
 
 int main()
 {
+//    CMyData* pData = new CMyData;
     CMyData* pData = new CMyDataEx;
     CMyDataEx* pNewData = nullptr;
 
     pData->SetData(15);
+    /*
+     * 아래와 같이 static_cast를 쓰면 메모리 상의 저장된 값은 그대로 있고
+     * 포인터의 타입만 바뀐다.
+     * */
     pNewData = static_cast<CMyDataEx*>(pData);
     pNewData->PrintData();
 

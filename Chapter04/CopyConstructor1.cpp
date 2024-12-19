@@ -7,6 +7,7 @@
 #define WHEN_YOU_USE_MEM_INI_LIST 0
 
 #include "bits/stdc++.h"
+using namespace std;
 
 class CMyData
 {

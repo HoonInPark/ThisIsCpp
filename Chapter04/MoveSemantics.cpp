@@ -2,11 +2,10 @@
 // Created by Changjoon Lee on 7/31/24.
 //
 #include "bits/stdc++.h"
-#include <iostream>
 using namespace std;
 
 #define FORCE_TO_CALL_MOVE_CONSTRUCTOR 1
-#define IDENTIFY_INST_BY_CHAR_DATA 1
+#define IDENTIFY_INST_BY_CHAR_DATA 0
 
 class CTestData
 {
@@ -81,9 +80,8 @@ int main()
 #else
     CTestData b("b");
 #endif
-
     cout << "* Before ******************" << endl;
     b = TestFunc(20);
-    cout << "* After *******************" << endl;
+    cout << "* After  ******************" << endl;
     CTestData c(b);
 }

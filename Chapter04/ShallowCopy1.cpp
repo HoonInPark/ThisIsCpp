@@ -8,6 +8,7 @@
 #define REDEF_SUBSTITUE_OPERATOR 1
 
 #include "bits/stdc++.h"
+using namespace std;
 
 class CMyData
 {

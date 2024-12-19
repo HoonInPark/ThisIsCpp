@@ -37,6 +37,15 @@ int main()
         pShape = new CCircle;
 
     pShape->Draw();
+
+    /*
+     * 실형식으로 형변환이 되는지 판별하기 위해
+     * 실형식으로 형변환시키는 dynamic_cast를 써서 아래와 같은 과정을 한 거 같은데...
+     * 1. dynamic_cast는 비싸다.
+     * 2. 코드가 길어진다. 그냥 virtual 쓰세요.
+     * 3. dynamic_cast는 자식 객체간 캐스팅은 안된다.
+     * 참조형식이 부모형식일 때 자식 형식 중 실형식과 동일한 것으로 캐스팅할 수 있을 뿐.
+     * */
     CRectangle* pRect = dynamic_cast<CRectangle*>(pShape);
     if (pRect)
         cout << "CRectangle::Draw()" << endl;

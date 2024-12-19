@@ -45,6 +45,9 @@ int main()
      * 그러면 CMyDataEx의 소멸자가 호출되지 않기에
      * 우항에서 CMyDataEx을 생성하면서 할당한 부모 클래스CMyDataEx의 멤버인  m_pnData가
      * delete pData로는 해제되지 않는 문제가 생김.
+     *
+     * 다만 CMyDataEx 클래스에서 소멸자를 virtual로 선언하면
+     * 자동으로 자식 형식인 CMyData로 참조된 객체가 해제될 때 같이 호출됨.
      * */
     delete pData;
 }

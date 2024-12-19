@@ -20,6 +20,7 @@ public:
 
 public:
     int SetString(const char* pszParam = "");
+    virtual void OnSetString(char* pszData, int nLength);
 
     [[nodiscard]] inline const char* GetString() const
     {
@@ -48,6 +49,8 @@ public:
 
     int operator==(const CMyString& rhs);
     int operator!=(const CMyString& rhs);
+
+    friend CMyString operator+(const char* pszParam, const CMyString& strParam);
 
 private:
     char* m_pszData{nullptr};

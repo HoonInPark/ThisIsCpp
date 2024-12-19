@@ -28,3 +28,23 @@ int CMyStringEx::Find(const char* pszParam)
 
     return -1;
 }
+
+void CMyStringEx::OnSetString(char* pszData, int nLength)
+{
+    if (0 == strcmp(pszData, "개새끼"))
+        strcpy(pszData, "착한놈");
+}
+
+#if IS_PRACTICE_10
+// "개새끼"가 포함되면 SetString을 하지 않음
+int CMyStringEx::SetString(const char* pszParam)
+{
+    int nResult;
+    if (0 == strcmp(pszParam, "개새끼"))
+        nResult = CMyString::SetString("착한사람");
+    else
+        nResult = CMyString::SetString(pszParam);
+
+    return nResult;
+}
+#endif

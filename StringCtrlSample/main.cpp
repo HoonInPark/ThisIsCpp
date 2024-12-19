@@ -15,10 +15,7 @@ void TestFunc(const CMyString& strParam)
 
 int main()
 {
-    CMyStringEx strTest;
-    strTest.SetString("I am a boy.");
-    cout << strTest << endl;
-
-    int nIndex = strTest.Find("am");
-    cout << "Index : " << nIndex << endl;
+    CMyString b("World"), c;
+    c = "Hello" + b;
+    cout << c << endl;
 }

@@ -2,6 +2,7 @@
 // Created by Changjoon Lee on 7/21/24.
 //
 #include "bits/stdc++.h"
+using namespace std;
 
 int main()
 {

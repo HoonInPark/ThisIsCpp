@@ -2,6 +2,7 @@
 // Created by Changjoon Lee on 7/30/24.
 //
 #include "bits/stdc++.h"
+using namespace std;
 
 #define USING_R_VAL_REF 1 // if 0, it makes error cause TestFunc doesn't support rval ref
 

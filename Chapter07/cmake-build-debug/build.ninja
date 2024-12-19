@@ -350,6 +350,161 @@ build CastSample2: CXX_EXECUTABLE_LINKER__CastSample2_Debug CMakeFiles/CastSampl
   TARGET_FILE = CastSample2
   TARGET_PDB = CastSample2.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target InheritOperOver
+
+
+#############################################
+# Order-only phony target for InheritOperOver
+
+build cmake_object_order_depends_target_InheritOperOver: phony || .
+
+build CMakeFiles/InheritOperOver.dir/InheritOperOver.cpp.o: CXX_COMPILER__InheritOperOver_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter07/InheritOperOver.cpp || cmake_object_order_depends_target_InheritOperOver
+  DEP_FILE = CMakeFiles/InheritOperOver.dir/InheritOperOver.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/InheritOperOver.dir
+  OBJECT_FILE_DIR = CMakeFiles/InheritOperOver.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target InheritOperOver
+
+
+#############################################
+# Link the executable InheritOperOver
+
+build InheritOperOver: CXX_EXECUTABLE_LINKER__InheritOperOver_Debug CMakeFiles/InheritOperOver.dir/InheritOperOver.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+  OBJECT_DIR = CMakeFiles/InheritOperOver.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = InheritOperOver
+  TARGET_PDB = InheritOperOver.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target MultiInherit1
+
+
+#############################################
+# Order-only phony target for MultiInherit1
+
+build cmake_object_order_depends_target_MultiInherit1: phony || .
+
+build CMakeFiles/MultiInherit1.dir/MultiInherit1.cpp.o: CXX_COMPILER__MultiInherit1_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter07/MultiInherit1.cpp || cmake_object_order_depends_target_MultiInherit1
+  DEP_FILE = CMakeFiles/MultiInherit1.dir/MultiInherit1.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/MultiInherit1.dir
+  OBJECT_FILE_DIR = CMakeFiles/MultiInherit1.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target MultiInherit1
+
+
+#############################################
+# Link the executable MultiInherit1
+
+build MultiInherit1: CXX_EXECUTABLE_LINKER__MultiInherit1_Debug CMakeFiles/MultiInherit1.dir/MultiInherit1.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+  OBJECT_DIR = CMakeFiles/MultiInherit1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = MultiInherit1
+  TARGET_PDB = MultiInherit1.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target MultiInherit2
+
+
+#############################################
+# Order-only phony target for MultiInherit2
+
+build cmake_object_order_depends_target_MultiInherit2: phony || .
+
+build CMakeFiles/MultiInherit2.dir/MultiInherit2.cpp.o: CXX_COMPILER__MultiInherit2_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter07/MultiInherit2.cpp || cmake_object_order_depends_target_MultiInherit2
+  DEP_FILE = CMakeFiles/MultiInherit2.dir/MultiInherit2.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/MultiInherit2.dir
+  OBJECT_FILE_DIR = CMakeFiles/MultiInherit2.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target MultiInherit2
+
+
+#############################################
+# Link the executable MultiInherit2
+
+build MultiInherit2: CXX_EXECUTABLE_LINKER__MultiInherit2_Debug CMakeFiles/MultiInherit2.dir/MultiInherit2.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+  OBJECT_DIR = CMakeFiles/MultiInherit2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = MultiInherit2
+  TARGET_PDB = MultiInherit2.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target VirtualInherit
+
+
+#############################################
+# Order-only phony target for VirtualInherit
+
+build cmake_object_order_depends_target_VirtualInherit: phony || .
+
+build CMakeFiles/VirtualInherit.dir/VirtualInherit.cpp.o: CXX_COMPILER__VirtualInherit_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter07/VirtualInherit.cpp || cmake_object_order_depends_target_VirtualInherit
+  DEP_FILE = CMakeFiles/VirtualInherit.dir/VirtualInherit.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/VirtualInherit.dir
+  OBJECT_FILE_DIR = CMakeFiles/VirtualInherit.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target VirtualInherit
+
+
+#############################################
+# Link the executable VirtualInherit
+
+build VirtualInherit: CXX_EXECUTABLE_LINKER__VirtualInherit_Debug CMakeFiles/VirtualInherit.dir/VirtualInherit.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+  OBJECT_DIR = CMakeFiles/VirtualInherit.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = VirtualInherit
+  TARGET_PDB = VirtualInherit.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target MultipleInheritinterface
+
+
+#############################################
+# Order-only phony target for MultipleInheritinterface
+
+build cmake_object_order_depends_target_MultipleInheritinterface: phony || .
+
+build CMakeFiles/MultipleInheritinterface.dir/MultipleInheritinterface.cpp.o: CXX_COMPILER__MultipleInheritinterface_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter07/MultipleInheritinterface.cpp || cmake_object_order_depends_target_MultipleInheritinterface
+  DEP_FILE = CMakeFiles/MultipleInheritinterface.dir/MultipleInheritinterface.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/MultipleInheritinterface.dir
+  OBJECT_FILE_DIR = CMakeFiles/MultipleInheritinterface.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target MultipleInheritinterface
+
+
+#############################################
+# Link the executable MultipleInheritinterface
+
+build MultipleInheritinterface: CXX_EXECUTABLE_LINKER__MultipleInheritinterface_Debug CMakeFiles/MultipleInheritinterface.dir/MultipleInheritinterface.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+  OBJECT_DIR = CMakeFiles/MultipleInheritinterface.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = MultipleInheritinterface
+  TARGET_PDB = MultipleInheritinterface.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -384,7 +539,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter07/cmake-build-debug
 
-build all: phony VirtualFunction VirtualDestructor vTableSample EarlyBinding LateBinding PureVirtualSample InterfaceSample AdtSample CastSample1 CastSample2
+build all: phony VirtualFunction VirtualDestructor vTableSample EarlyBinding LateBinding PureVirtualSample InterfaceSample AdtSample CastSample1 CastSample2 InheritOperOver MultiInherit1 MultiInherit2 VirtualInherit MultipleInheritinterface
 
 # =============================================================================
 # Built-in targets

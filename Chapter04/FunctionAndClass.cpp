@@ -3,6 +3,7 @@
 //
 
 #include "bits/stdc++.h"
+using namespace std;
 
 #define HOW_TO_MAKE_SETDATA_VALID 0
 #define HOW_TO_PREVENT_FROM_UNINTENDED_COPY 0

@@ -16,9 +16,17 @@ using namespace std;
  *
  */
 
+CMyString operator+(const char* pszParam, const CMyString& strParam)
+{
+    CMyString strResult(pszParam);
+    strResult.Append(strParam.m_pszData);
+
+    return strResult;
+}
+
 CMyString::CMyString()
 {
-
+    cout << "CMyString()" << endl;
 }
 
 CMyString::CMyString(const char* _str)
@@ -32,6 +40,7 @@ CMyString::CMyString(const char* _str)
 
 CMyString::CMyString(const CMyString& rhs)
 {
+    cout << "CMyString(const CMyString&)" << endl;
     m_nLength = rhs.m_nLength;
     m_pszData = new char[m_nLength + 1];
     strcpy(m_pszData, rhs.m_pszData);
@@ -86,9 +95,15 @@ int CMyString::SetString(const char* pszParam)
     strcpy(m_pszData, pszParam);
 
     m_nLength = nLength; // Set할 떄 이외의 상황에선 m_nLenth는 읽는 등의 행위를 하지 않고 있다.
+
+    OnSetString(m_pszData, m_nLength);
     return nLength;
 }
 
+void CMyString::OnSetString(char* pszData, int nLength)
+{
+
+}
 
 void CMyString::Release()
 {
@@ -144,6 +159,7 @@ CMyString CMyString::operator+(const CMyString& rhs)
     CMyString result(*this);
     result.Append(rhs.m_pszData);
     return std::move(result);
+//    return result;
 #endif
 }
 
@@ -204,3 +220,4 @@ int CMyString::operator!=(const CMyString& rhs)
 
     return 1;
 }
+

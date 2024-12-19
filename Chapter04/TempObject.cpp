@@ -1,9 +1,10 @@
 //
 // Created by Changjoon Lee on 7/29/24.
 //
-#define MAKE_TEMP_OBJ_PERM 1
+#define MAKE_TEMP_OBJ_PERM 0
 
 #include "bits/stdc++.h"
+using namespace std;
 
 class CTestData
 {
@@ -20,11 +21,20 @@ public:
         cout << "~CTestData() : " << m_pszName << endl;
     }
 
+    // 복사생성자
     CTestData(const CTestData& rhs)
             : m_nData(rhs.m_nData),
               m_pszName(rhs.m_pszName)
     {
         cout << "CTestData(const CTestData&) : " << m_pszName << endl;
+    }
+
+    // 이동생성자
+    CTestData(const CTestData&& rhs)
+            : m_nData(rhs.m_nData),
+              m_pszName(rhs.m_pszName)
+    {
+        cout << "CTestData(const CTestData&&) : " << m_pszName << endl;
     }
 
     CTestData& operator=(const CTestData& rhs)
@@ -48,6 +58,7 @@ CTestData TestFunc(int nParam)
     CTestData a(nParam, "a");
 
     return a;
+//    return std::move(a);
 }
 
 int main()
@@ -66,9 +77,7 @@ int main()
     const CTestData& rData = TestFunc(10);
 #else
     b = TestFunc(10);
-//    TestFunc(10);
 #endif
 
     cout << "********* After **********" << endl;
-//    cout << b.GetData() << endl;
 }

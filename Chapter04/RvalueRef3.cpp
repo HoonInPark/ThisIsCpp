@@ -2,6 +2,7 @@
 // Created by Changjoon Lee on 7/30/24.
 //
 #include "bits/stdc++.h"
+using namespace std;
 
 void TestFunc(int&& rParam)
 {

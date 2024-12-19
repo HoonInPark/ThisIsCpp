@@ -8,10 +8,19 @@
 
 #include "MyString.h"
 
+#define IS_PRACTICE_10 0
+
 class CMyStringEx : public CMyString
 {
 public:
+    using CMyString::CMyString;
+
     int Find(const char* pszParam);
+    virtual void OnSetString(char* pszData, int nLength);
+
+#if IS_PRACTICE_10
+    int SetString(const char* pszParam = "");
+#endif
 };
 
 
