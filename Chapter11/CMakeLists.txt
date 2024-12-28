@@ -4,4 +4,6 @@ project(Chapter11)
 set(CMAKE_CXX_STANDARD 26)
 
 add_executable(AddressBook AddressBook.c)
-add_executable(AddressBook_OOP AddressBook_OOP.cpp)
+add_executable(AddressBook_OOP AddressBook_OOP.cpp
+        USERDATA.h
+        USERDATA.cpp)

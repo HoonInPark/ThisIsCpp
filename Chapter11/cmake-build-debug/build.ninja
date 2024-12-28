@@ -86,6 +86,12 @@ build CMakeFiles/AddressBook_OOP.dir/AddressBook_OOP.cpp.o: CXX_COMPILER__Addres
   OBJECT_DIR = CMakeFiles/AddressBook_OOP.dir
   OBJECT_FILE_DIR = CMakeFiles/AddressBook_OOP.dir
 
+build CMakeFiles/AddressBook_OOP.dir/USERDATA.cpp.o: CXX_COMPILER__AddressBook_OOP_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/USERDATA.cpp || cmake_object_order_depends_target_AddressBook_OOP
+  DEP_FILE = CMakeFiles/AddressBook_OOP.dir/USERDATA.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/AddressBook_OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/AddressBook_OOP.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target AddressBook_OOP
@@ -94,7 +100,7 @@ build CMakeFiles/AddressBook_OOP.dir/AddressBook_OOP.cpp.o: CXX_COMPILER__Addres
 #############################################
 # Link the executable AddressBook_OOP
 
-build AddressBook_OOP: CXX_EXECUTABLE_LINKER__AddressBook_OOP_Debug CMakeFiles/AddressBook_OOP.dir/AddressBook_OOP.cpp.o
+build AddressBook_OOP: CXX_EXECUTABLE_LINKER__AddressBook_OOP_Debug CMakeFiles/AddressBook_OOP.dir/AddressBook_OOP.cpp.o CMakeFiles/AddressBook_OOP.dir/USERDATA.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/AddressBook_OOP.dir
   POST_BUILD = :
