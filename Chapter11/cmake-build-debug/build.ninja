@@ -67,6 +67,12 @@ build CMakeFiles/AddressBook.dir/LinkedList.c.o: C_COMPILER__AddressBook_unscann
   OBJECT_DIR = CMakeFiles/AddressBook.dir
   OBJECT_FILE_DIR = CMakeFiles/AddressBook.dir
 
+build CMakeFiles/AddressBook.dir/UserInterface.c.o: C_COMPILER__AddressBook_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/UserInterface.c || cmake_object_order_depends_target_AddressBook
+  DEP_FILE = CMakeFiles/AddressBook.dir/UserInterface.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/AddressBook.dir
+  OBJECT_FILE_DIR = CMakeFiles/AddressBook.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target AddressBook
@@ -75,7 +81,7 @@ build CMakeFiles/AddressBook.dir/LinkedList.c.o: C_COMPILER__AddressBook_unscann
 #############################################
 # Link the executable AddressBook
 
-build AddressBook: C_EXECUTABLE_LINKER__AddressBook_Debug CMakeFiles/AddressBook.dir/AddressBook.c.o CMakeFiles/AddressBook.dir/DataManager.c.o CMakeFiles/AddressBook.dir/LinkedList.c.o
+build AddressBook: C_EXECUTABLE_LINKER__AddressBook_Debug CMakeFiles/AddressBook.dir/AddressBook.c.o CMakeFiles/AddressBook.dir/DataManager.c.o CMakeFiles/AddressBook.dir/LinkedList.c.o CMakeFiles/AddressBook.dir/UserInterface.c.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/AddressBook.dir
   POST_BUILD = :

@@ -7,7 +7,9 @@ add_executable(AddressBook AddressBook.c
         DataManager.h
         DataManager.c
         LinkedList.h
-        LinkedList.c)
+        LinkedList.c
+        UserInterface.h
+        UserInterface.c)
 add_executable(AddressBook_OOP AddressBook_OOP.cpp
         USERDATA.h
         USERDATA.cpp)
