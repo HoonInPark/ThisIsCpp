@@ -15,8 +15,6 @@ struct SNode
 
 struct SAddressBook
 {
-    void (* m_fpAdd)(struct SNode*);
-
 
     struct SNode* m_HeadNode;
 };
