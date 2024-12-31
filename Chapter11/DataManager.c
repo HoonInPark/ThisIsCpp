@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+// 생성자... 같은 것
 struct SNode* CreateNode(const char* _sUserName, const char* _sUserPhoneNum)
 {
     struct SNode* pRetNode = (struct SNode*) malloc(sizeof(struct SNode));
@@ -24,6 +25,17 @@ struct SNode* CreateNode(const char* _sUserName, const char* _sUserPhoneNum)
     strcpy(pRetNode->m_sUserPhoneNum, _sUserPhoneNum);
 
     return pRetNode;
+}
+
+// 소멸자... 같은 것
+struct SNode* FreeNode(struct SNode* _pInNode)
+{
+    if (!_pInNode) return NULL;
+
+    free(_pInNode->m_sUserName);
+    free(_pInNode->m_sUserPhoneNum);
+
+    return _pInNode->m_pNextNode;
 }
 
 void ShowNodeInfo(struct SNode* _pInNode)
@@ -59,30 +71,53 @@ bool AddNode(struct SAddressBook* _pSelf, struct SNode* _pInNode)
     return true;
 }
 
-bool DelNode(struct SAddressBook* _pSelf, struct SNode* _pInNode)
+bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
 {
-    if (_pSelf->m_HeadNode == _pInNode)
-    {
-        
-    }
+    if (!_pSelf->m_HeadNode) return false;
 
-    struct SNode* pNodeBefore;
-    struct SNode* pNodeCurr = _pSelf->m_HeadNode;
-    while (pNodeCurr != NULL)
+    struct SNode* pBeforeNode = NULL;
+    struct SNode* pNodeFound = NULL;
+    if (FindNode(_pSelf, _sInChar, pBeforeNode, pNodeFound))
     {
-        pNodeBefore = pNodeCurr;
-        pNodeCurr = pNodeBefore->m_pNextNode;
-
-        if (pNodeCurr == _pInNode)
+        if (!pBeforeNode)
         {
 
+            return false;
         }
+
+
+
+        return true;
     }
 
-    return 0;
+    return false;
 }
 
-struct SNode* FindNode(const char* _sInChar)
+bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
+              struct SNode* _pBeforeNode, struct SNode* _pNodeFound)
 {
-    return NULL;
+    if (!_pSelf) return false;
+    struct SNode* pNodeTmp = _pSelf->m_HeadNode;
+    if (!pNodeTmp) return false;
+
+    struct SNode* pBeforeNodeTmp = NULL;
+    for (;;)
+    {
+        if (strcmp(pNodeTmp->m_sUserName, _sInChar) == true ||
+            strcmp(pNodeTmp->m_sUserPhoneNum, _sInChar) == true)
+        {
+            _pBeforeNode = pBeforeNodeTmp;
+            _pNodeFound = pNodeTmp;
+            return true;
+        }
+
+        if (pNodeTmp->m_pNextNode)
+        {
+            pBeforeNodeTmp = pNodeTmp;
+            pNodeTmp = pNodeTmp->m_pNextNode;
+        }
+        else break;
+    }
+
+    return false;
 }
