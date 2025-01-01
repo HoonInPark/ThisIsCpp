@@ -8,9 +8,9 @@
 #include <stdbool.h>
 #include "LinkedList.h"
 
-struct SNode* CreateNode(const char* _sUserName, const char* _sUserPhoneNum);
-void ShowNodeInfo(struct SNode* _pInNode);
-struct SNode* FreeNode(struct SNode* _pInNode);
+struct SNode* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum);
+bool ShowNodeInfo(struct SAddressBook* _pSelf, struct SNode* _pInNode);
+struct SNode* FreeNode(struct SAddressBook* _pSelf, struct SNode* _pInNode);
 
 struct SAddressBook* CreateList();
 

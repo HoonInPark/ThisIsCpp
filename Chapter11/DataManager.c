@@ -8,8 +8,9 @@
 #include <string.h>
 
 // 생성자... 같은 것
-struct SNode* CreateNode(const char* _sUserName, const char* _sUserPhoneNum)
+struct SNode* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum)
 {
+    if (!_pSelf) return NULL;
     struct SNode* pRetNode = (struct SNode*) malloc(sizeof(struct SNode));
     if (!pRetNode) return NULL;
 
@@ -28,8 +29,9 @@ struct SNode* CreateNode(const char* _sUserName, const char* _sUserPhoneNum)
 }
 
 // 소멸자... 같은 것
-struct SNode* FreeNode(struct SNode* _pInNode)
+struct SNode* FreeNode(struct SAddressBook* _pSelf, struct SNode* _pInNode)
 {
+    if (!_pSelf) return NULL;
     if (!_pInNode) return NULL;
 
     free(_pInNode->m_sUserName);
@@ -38,10 +40,13 @@ struct SNode* FreeNode(struct SNode* _pInNode)
     return _pInNode->m_pNextNode;
 }
 
-void ShowNodeInfo(struct SNode* _pInNode)
+bool ShowNodeInfo(struct SAddressBook* _pSelf, struct SNode* _pInNode)
 {
+    if (!_pSelf) return false;
+
     printf("%s \n", _pInNode->m_sUserName);
     printf("%s \n", _pInNode->m_sUserPhoneNum);
+    return true;
 }
 
 struct SAddressBook* CreateList()
@@ -79,6 +84,7 @@ bool AddNode(struct SAddressBook* _pSelf, struct SNode* _pInNode)
 
 bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
 {
+    if (!_pSelf) return false;
     if (!_pSelf->m_HeadNode) return false;
 
     struct SNode* pBeforeNode = NULL;
@@ -89,12 +95,12 @@ bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
         {
             if (_pSelf->m_HeadNode != pNodeFound) return false;
 
-            _pSelf->m_HeadNode = FreeNode(pNodeFound);
+            _pSelf->m_HeadNode = FreeNode(_pSelf, pNodeFound);
             return true;
         }
         else
         {
-            pBeforeNode->m_pNextNode = FreeNode(pNodeFound);
+            pBeforeNode->m_pNextNode = FreeNode(_pSelf, pNodeFound);
             return true;
         }
     }
@@ -124,7 +130,7 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
             pBeforeNodeTmp = pNodeTmp;
             pNodeTmp = pNodeTmp->m_pNextNode;
         }
-        else break;
+        else break; // m_pNextNode가 없다는 뜻은 끝에 왔다는 것임. 따라서 브레이크
     }
 
     return false;

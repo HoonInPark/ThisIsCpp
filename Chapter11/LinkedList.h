@@ -15,7 +15,6 @@ struct SNode
 
 struct SAddressBook
 {
-
     struct SNode* m_HeadNode;
 };
 
