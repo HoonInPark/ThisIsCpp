@@ -66,6 +66,12 @@ bool AddNode(struct SAddressBook* _pSelf, struct SNode* _pInNode)
         return true;
     }
 
+    if (FindNode(_pSelf, _pInNode->m_sUserPhoneNum, NULL, NULL))
+    {
+//        printf(""); // 이미 해당 노드와 정보가 같은 게 있다는 걸 알려줘야. 근데 이건 유저 인터페이스의 함수를 끌어 써야.
+        return true;
+    }
+
     _pInNode->m_pNextNode = _pSelf->m_HeadNode;
     _pSelf->m_HeadNode = _pInNode;
     return true;
@@ -81,11 +87,11 @@ bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
     {
         if (!pBeforeNode)
         {
+            if (_pSelf->m_HeadNode != pNodeFound) return false;
 
-            return false;
+            DelNode(_pSelf, pNodeFound);
+            return true;
         }
-
-
 
         return true;
     }
