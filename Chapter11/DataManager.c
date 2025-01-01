@@ -85,18 +85,20 @@ bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
     struct SNode* pNodeFound = NULL;
     if (FindNode(_pSelf, _sInChar, pBeforeNode, pNodeFound))
     {
-        if (!pBeforeNode)
+        if (!pBeforeNode) // 만약 pBeforeNode가 NULL이면 pNodeFound는 m_HeadNode일 것.
         {
             if (_pSelf->m_HeadNode != pNodeFound) return false;
 
-            DelNode(_pSelf, pNodeFound);
+            _pSelf->m_HeadNode = FreeNode(pNodeFound);
             return true;
         }
-
-        return true;
+        else
+        {
+            pBeforeNode->m_pNextNode = FreeNode(pNodeFound);
+            return true;
+        }
     }
-
-    return false;
+    else return false;
 }
 
 bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
