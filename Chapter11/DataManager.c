@@ -43,6 +43,7 @@ struct SNode* FreeNode(struct SAddressBook* _pSelf, struct SNode* _pInNode)
 bool ShowNodeInfo(struct SAddressBook* _pSelf, struct SNode* _pInNode)
 {
     if (!_pSelf) return false;
+    if (!_pInNode) return false;
 
     printf("%s \n", _pInNode->m_sUserName);
     printf("%s \n", _pInNode->m_sUserPhoneNum);

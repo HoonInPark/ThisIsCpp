@@ -13,6 +13,6 @@
 int InitAddressBook();
 
 void PrintMenu();
-int ProcessMenuInput();
+int ProcessMenuInput(struct SAddressBook* _pSelf);
 
 #endif //CHAPTER11_USERINTERFACE_H

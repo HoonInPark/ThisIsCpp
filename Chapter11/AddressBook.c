@@ -18,5 +18,5 @@
  * */
 int main()
 {
-//    return InitAddressBook();
+    return InitAddressBook();
 }
