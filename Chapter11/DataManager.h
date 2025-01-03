@@ -8,16 +8,16 @@
 #include <stdbool.h>
 #include "LinkedList.h"
 
-struct SNode* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum);
-bool ShowNodeInfo(struct SAddressBook* _pSelf, struct SNode* _pInNode);
-struct SNode* FreeNode(struct SAddressBook* _pSelf, struct SNode* _pInNode);
+struct USERDATA* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum);
+bool ShowNodeInfo(struct SAddressBook* _pSelf, struct USERDATA* _pInNode);
+struct USERDATA* FreeNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode);
 
 struct SAddressBook* CreateList();
 
-bool AddNode(struct SAddressBook* _pSelf, struct SNode* _pInNode);
+bool AddNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode);
 bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar);
 
 bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
-              struct SNode* _pBeforeNode, struct SNode* _pNodeFound);
+              struct USERDATA* _pBeforeNode, struct USERDATA* _pNodeFound);
 
 #endif //CHAPTER11_DATAMANAGER_H

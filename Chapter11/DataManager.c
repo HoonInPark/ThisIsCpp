@@ -8,10 +8,10 @@
 #include <string.h>
 
 // 생성자... 같은 것
-struct SNode* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum)
+struct USERDATA* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum)
 {
     if (!_pSelf) return NULL;
-    struct SNode* pRetNode = (struct SNode*) malloc(sizeof(struct SNode));
+    struct USERDATA* pRetNode = (struct USERDATA*) malloc(sizeof(struct USERDATA));
     if (!pRetNode) return NULL;
 
     pRetNode->m_pNextNode = NULL;
@@ -29,7 +29,7 @@ struct SNode* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, co
 }
 
 // 소멸자... 같은 것
-struct SNode* FreeNode(struct SAddressBook* _pSelf, struct SNode* _pInNode)
+struct USERDATA* FreeNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode)
 {
     if (!_pSelf) return NULL;
     if (!_pInNode) return NULL;
@@ -40,7 +40,7 @@ struct SNode* FreeNode(struct SAddressBook* _pSelf, struct SNode* _pInNode)
     return _pInNode->m_pNextNode;
 }
 
-bool ShowNodeInfo(struct SAddressBook* _pSelf, struct SNode* _pInNode)
+bool ShowNodeInfo(struct SAddressBook* _pSelf, struct USERDATA* _pInNode)
 {
     if (!_pSelf) return false;
     if (!_pInNode) return false;
@@ -62,7 +62,7 @@ struct SAddressBook* CreateList()
     return NULL;
 }
 
-bool AddNode(struct SAddressBook* _pSelf, struct SNode* _pInNode)
+bool AddNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode)
 {
     if (!_pSelf || !_pInNode) return false;
 
@@ -88,8 +88,8 @@ bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
     if (!_pSelf) return false;
     if (!_pSelf->m_HeadNode) return false;
 
-    struct SNode* pBeforeNode = NULL;
-    struct SNode* pNodeFound = NULL;
+    struct USERDATA* pBeforeNode = NULL;
+    struct USERDATA* pNodeFound = NULL;
     if (FindNode(_pSelf, _sInChar, pBeforeNode, pNodeFound))
     {
         if (!pBeforeNode) // 만약 pBeforeNode가 NULL이면 pNodeFound는 m_HeadNode일 것.
@@ -109,13 +109,13 @@ bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
 }
 
 bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
-              struct SNode* _pBeforeNode, struct SNode* _pNodeFound)
+              struct USERDATA* _pBeforeNode, struct USERDATA* _pNodeFound)
 {
     if (!_pSelf) return false;
-    struct SNode* pNodeTmp = _pSelf->m_HeadNode;
+    struct USERDATA* pNodeTmp = _pSelf->m_HeadNode;
     if (!pNodeTmp) return false;
 
-    struct SNode* pBeforeNodeTmp = NULL;
+    struct USERDATA* pBeforeNodeTmp = NULL;
     for (;;)
     {
         if (strcmp(pNodeTmp->m_sUserName, _sInChar) == true ||

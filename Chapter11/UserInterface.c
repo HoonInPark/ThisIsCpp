@@ -1,21 +1,34 @@
 //
 // Created by Changjoon Lee on 2024. 12. 28..
 //
+#include "UserInterface.h"
 
 #include <printf.h>
 #include <stdlib.h>
-#include "UserInterface.h"
+#include <string.h>
+
+/*
+ * 문제들
+ * 1. InitAddressBook() 안에서 동적할당 없이 SAddressBook를 쓰고 싶다. 근데 터지네? v
+ * 2. case 2에서 사용자 입력이 정상적으로 안되는 문제.
+ * 3. 그리고 입력 버퍼? 얘 뭐 하는 애인가?
+ * 3.
+ * */
 
 int InitAddressBook()
 {
     // 동적할당 필요 없다. 이 스코프 바깥으로 해당 포인터가 벗어날 일이 없기에.
-    struct SAddressBook* pSingleAddressBook;
-    pSingleAddressBook->m_HeadNode = NULL;
+    struct SAddressBook SingleAddressBook;
+    struct SAddressBook* pSelf = &SingleAddressBook;
+    pSelf->m_HeadNode = NULL;
 
+    int ReturnCode;
     for (;;)
     {
         PrintMenu();
-        if (ProcessMenuInput(pSingleAddressBook)) return 1;
+        ReturnCode = ProcessMenuInput(pSelf);
+        if (1 == ReturnCode) return 1;
+        else if (0 == ReturnCode) return 0;
     }
 
     // 정상 종료되면 리턴 0
@@ -50,7 +63,7 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
             printf("type name or phone number : ");
             scanf("%sInput", sInput);
 
-            struct SNode* pNodeTmp;
+            struct USERDATA* pNodeTmp;
             FindNode(_pSelf, sInput, NULL, pNodeTmp);
             ShowNodeInfo(_pSelf, pNodeTmp);
 
@@ -61,11 +74,15 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
             char sInputName[64], sInputNum[16];
             printf("type name : ");
             fgets(sInputName, sizeof(sInputName), stdin);
+//            sInputName[strcspn(sInputName, "\n")] = '\0';
+            fflush(stdin);
+
             printf("\n");
             printf("type phone number : ");
             fgets(sInputNum, sizeof(sInputNum), stdin);
+//            sInputNum[strcspn(sInputNum, "\n")] = '\0';
 
-            struct SNode* pNodeTmp = CreateNode(_pSelf, sInputName, sInputNum);
+            struct USERDATA* pNodeTmp = CreateNode(_pSelf, sInputName, sInputNum);
             if (pNodeTmp)
                 AddNode(_pSelf, pNodeTmp);
 
@@ -73,7 +90,7 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
         }
         case 3:
         {
-            struct SNode* pNodeTmp;
+            struct USERDATA* pNodeTmp;
             pNodeTmp = _pSelf->m_HeadNode;
             for(;;)
             {
@@ -107,5 +124,5 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
             break;
     }
 
-    return 0;
+    return -1;
 }
