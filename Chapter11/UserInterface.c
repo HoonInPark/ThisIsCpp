@@ -10,9 +10,9 @@
 /*
  * 문제들
  * 1. InitAddressBook() 안에서 동적할당 없이 SAddressBook를 쓰고 싶다. 근데 터지네? v
- * 2. case 2에서 사용자 입력이 정상적으로 안되는 문제.
+ * 2. case 2에서 사용자 입력이 정상적으로 안되는 문제. -> 지금은 Find 함수가 안되는 중
  * 3. 그리고 입력 버퍼? 얘 뭐 하는 애인가? -> <C 프로그래밍> 100p 참조. v
- * 3.
+ * 3. 왜 또 입력이 안되지? -> 한글 자판으로 쳐서! v
  * */
 
 int InitAddressBook()
@@ -51,9 +51,10 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
 
     system("clear");
 
-    char cInput;
     printf("type : ");
-    scanf("%cInput", &cInput);
+    char cInput;
+    cInput = getchar();
+//    scanf("%cInput", &cInput);
     fflush(stdin);
     printf("\n");
 
@@ -63,11 +64,10 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
         {
             char sInput[64];
             printf("type name or phone number : ");
-            scanf("%sInput", sInput);
+            scanf("%[^\n]s", sInput);
             fflush(stdin);
 
-            struct USERDATA Node;
-            struct USERDATA* pNodeTmp = &Node;
+            struct USERDATA* pNodeTmp;
             if (FindNode(_pSelf, sInput, NULL, pNodeTmp))
                 ShowNodeInfo(_pSelf, pNodeTmp);
             else

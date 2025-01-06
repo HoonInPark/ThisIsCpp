@@ -118,8 +118,8 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
     struct USERDATA* pBeforeNodeTmp = NULL;
     for (;;)
     {
-        if (strcmp(pNodeTmp->m_sUserName, _sInChar) == true ||
-            strcmp(pNodeTmp->m_sUserPhoneNum, _sInChar) == true)
+        if (strcmp(pNodeTmp->m_sUserName, _sInChar) == 0 ||
+            strcmp(pNodeTmp->m_sUserPhoneNum, _sInChar) == 0)
         {
             _pBeforeNode = pBeforeNodeTmp;
             _pNodeFound = pNodeTmp;
