@@ -11,7 +11,7 @@
  * 문제들
  * 1. InitAddressBook() 안에서 동적할당 없이 SAddressBook를 쓰고 싶다. 근데 터지네? v
  * 2. case 2에서 사용자 입력이 정상적으로 안되는 문제.
- * 3. 그리고 입력 버퍼? 얘 뭐 하는 애인가?
+ * 3. 그리고 입력 버퍼? 얘 뭐 하는 애인가? -> <C 프로그래밍> 100p 참조. v
  * 3.
  * */
 
@@ -38,11 +38,11 @@ int InitAddressBook()
 void PrintMenu()
 {
     system("clear");
-    printf("1. find address \n");
-    printf("2. add address \n");
-    printf("3. print all \n");
-    printf("4. delete address \n");
-    printf("5. close \n");
+    printf("\n 1. find address");
+    printf("\n 2. add address");
+    printf("\n 3. print all");
+    printf("\n 4. delete address");
+    printf("\n 5. close \n");
 }
 
 int ProcessMenuInput(struct SAddressBook* _pSelf)
@@ -50,9 +50,11 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
     if (!_pSelf) return 1;
 
     system("clear");
+
     char cInput;
     printf("type : ");
     scanf("%cInput", &cInput);
+    fflush(stdin);
     printf("\n");
 
     switch (cInput - 48)
@@ -62,25 +64,30 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
             char sInput[64];
             printf("type name or phone number : ");
             scanf("%sInput", sInput);
+            fflush(stdin);
 
-            struct USERDATA* pNodeTmp;
-            FindNode(_pSelf, sInput, NULL, pNodeTmp);
-            ShowNodeInfo(_pSelf, pNodeTmp);
+            struct USERDATA Node;
+            struct USERDATA* pNodeTmp = &Node;
+            if (FindNode(_pSelf, sInput, NULL, pNodeTmp))
+                ShowNodeInfo(_pSelf, pNodeTmp);
+            else
+                printf("can't find %s", sInput);
 
             break;
         }
         case 2:
         {
             char sInputName[64], sInputNum[16];
-            printf("type name : ");
-            fgets(sInputName, sizeof(sInputName), stdin);
-//            sInputName[strcspn(sInputName, "\n")] = '\0';
-            fflush(stdin);
 
-            printf("\n");
-            printf("type phone number : ");
-            fgets(sInputNum, sizeof(sInputNum), stdin);
-//            sInputNum[strcspn(sInputNum, "\n")] = '\0';
+            printf("type name : ");
+            scanf("%[^\n]s", sInputName);
+            fflush(stdin);
+            printf("%s", sInputName);
+
+            printf("\ntype phone number : ");
+            scanf("%[^\n]s", sInputNum);
+            fflush(stdin);
+            printf("%s",  sInputNum);
 
             struct USERDATA* pNodeTmp = CreateNode(_pSelf, sInputName, sInputNum);
             if (pNodeTmp)
@@ -106,8 +113,11 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
             char sInputName[64], sInputNum[16];
             printf("type name : ");
             scanf("%sInputName", sInputName);
+            fflush(stdin);
+
             printf("type phone number : ");
             scanf("%sInputNum", sInputNum);
+            fflush(stdin);
 
             if (!DelNode(_pSelf, sInputName) &&
                 !DelNode(_pSelf, sInputNum))
