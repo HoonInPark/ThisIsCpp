@@ -25,6 +25,7 @@ int InitAddressBook()
     int ReturnCode;
     for (;;)
     {
+        system("clear");
         PrintMenu();
         ReturnCode = ProcessMenuInput(pSelf);
         if (1 == ReturnCode) return 1;
@@ -68,7 +69,7 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
             fflush(stdin);
 
             struct USERDATA* pNodeTmp;
-            if (FindNode(_pSelf, sInput, NULL, pNodeTmp))
+            if (FindNode(_pSelf, sInput, NULL, &pNodeTmp))
                 ShowNodeInfo(_pSelf, pNodeTmp);
             else
                 printf("can't find %s", sInput);
@@ -115,12 +116,7 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
             scanf("%sInputName", sInputName);
             fflush(stdin);
 
-            printf("type phone number : ");
-            scanf("%sInputNum", sInputNum);
-            fflush(stdin);
-
-            if (!DelNode(_pSelf, sInputName) &&
-                !DelNode(_pSelf, sInputNum))
+            if (!DelNode(_pSelf, sInputName))
                 break;
 
             break;

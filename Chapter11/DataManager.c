@@ -90,7 +90,7 @@ bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
 
     struct USERDATA* pBeforeNode = NULL;
     struct USERDATA* pNodeFound = NULL;
-    if (FindNode(_pSelf, _sInChar, pBeforeNode, pNodeFound))
+    if (FindNode(_pSelf, _sInChar, &pBeforeNode, &pNodeFound))
     {
         if (!pBeforeNode) // 만약 pBeforeNode가 NULL이면 pNodeFound는 m_HeadNode일 것.
         {
@@ -109,7 +109,7 @@ bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
 }
 
 bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
-              struct USERDATA* _pBeforeNode, struct USERDATA* _pNodeFound)
+              struct USERDATA** _ppBeforeNode, struct USERDATA** _ppNodeFound)
 {
     if (!_pSelf) return false;
     struct USERDATA* pNodeTmp = _pSelf->m_HeadNode;
@@ -121,8 +121,8 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
         if (strcmp(pNodeTmp->m_sUserName, _sInChar) == 0 ||
             strcmp(pNodeTmp->m_sUserPhoneNum, _sInChar) == 0)
         {
-            _pBeforeNode = pBeforeNodeTmp;
-            _pNodeFound = pNodeTmp;
+            if (_ppBeforeNode) *_ppBeforeNode = pBeforeNodeTmp;
+            *_ppNodeFound = pNodeTmp;
             return true;
         }
 

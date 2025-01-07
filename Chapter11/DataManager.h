@@ -18,6 +18,6 @@ bool AddNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode);
 bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar);
 
 bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
-              struct USERDATA* _pBeforeNode, struct USERDATA* _pNodeFound);
+              struct USERDATA** _ppBeforeNode, struct USERDATA** _ppNodeFound);
 
 #endif //CHAPTER11_DATAMANAGER_H
