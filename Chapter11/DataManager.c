@@ -122,7 +122,7 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
             strcmp(pNodeTmp->m_sUserPhoneNum, _sInChar) == 0)
         {
             if (_ppBeforeNode) *_ppBeforeNode = pBeforeNodeTmp;
-            *_ppNodeFound = pNodeTmp;
+            if (_ppNodeFound) *_ppNodeFound = pNodeTmp;
             return true;
         }
 
