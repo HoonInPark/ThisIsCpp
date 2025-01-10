@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define DATA_FILE_NAME "Address.dat"
+
 // 생성자... 같은 것
 struct USERDATA* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum)
 {
@@ -135,4 +137,17 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
     }
 
     return false;
+}
+
+int LoadList(char* _sInChar)
+{
+    FILE* fp = NULL;
+    struct USERDATA user = {0};
+
+    return 0;
+}
+
+int SaveList(char* _sInChar)
+{
+    return 0;
 }

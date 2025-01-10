@@ -19,5 +19,6 @@ bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar);
 
 bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
               struct USERDATA** _ppBeforeNode, struct USERDATA** _ppNodeFound);
-
+int LoadList(char* _sInChar);
+int SaveList(char* _sInChar);
 #endif //CHAPTER11_DATAMANAGER_H
