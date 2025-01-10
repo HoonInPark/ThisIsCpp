@@ -52,18 +52,6 @@ bool ShowNodeInfo(struct SAddressBook* _pSelf, struct USERDATA* _pInNode)
     return true;
 }
 
-struct SAddressBook* CreateList()
-{
-    struct SAddressBook* pRetList = (struct SAddressBook*) malloc(sizeof(struct SAddressBook));
-    if (pRetList)
-    {
-        pRetList->m_HeadNode = NULL;
-        return pRetList;
-    }
-
-    return NULL;
-}
-
 bool AddNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode)
 {
     if (!_pSelf || !_pInNode) return false;
@@ -139,10 +127,14 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
     return false;
 }
 
-int LoadList(char* _sInChar)
+int LoadList(char* _sFileName)
 {
     FILE* fp = NULL;
     struct USERDATA user = {0};
+
+    fp = fopen(_sFileName, "rb");
+
+    if (!fp) return 0;
 
     return 0;
 }

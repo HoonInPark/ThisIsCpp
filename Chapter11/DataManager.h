@@ -12,13 +12,11 @@ struct USERDATA* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName,
 bool ShowNodeInfo(struct SAddressBook* _pSelf, struct USERDATA* _pInNode);
 struct USERDATA* FreeNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode);
 
-struct SAddressBook* CreateList();
-
 bool AddNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode);
 bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar);
 
 bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
               struct USERDATA** _ppBeforeNode, struct USERDATA** _ppNodeFound);
-int LoadList(char* _sInChar);
+int LoadList(char* _sFileName);
 int SaveList(char* _sInChar);
 #endif //CHAPTER11_DATAMANAGER_H
