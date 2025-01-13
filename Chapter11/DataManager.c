@@ -9,6 +9,28 @@
 
 #define DATA_FILE_NAME "Address.dat"
 
+struct SAddressBook* CreateList()
+{
+    struct SAddressBook* pRetList = (struct SAddressBook*) malloc(sizeof(struct SAddressBook));
+    if (pRetList)
+    {
+        pRetList->m_HeadNode = NULL;
+        return pRetList;
+    }
+
+    return NULL;
+}
+
+void ReleaseListItem(struct SAddressBook* _pSelf)
+{
+    struct USERDATA* pNodeTmp = _pSelf->m_HeadNode;
+
+    while (!pNodeTmp)
+    {
+        pNodeTmp = FreeNode(_pSelf, pNodeTmp);
+    }
+}
+
 // 생성자... 같은 것
 struct USERDATA* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum)
 {
@@ -127,7 +149,7 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
     return false;
 }
 
-int LoadList(char* _sFileName)
+int LoadList(struct SAddressBook* _pSelf, char* _sFileName)
 {
     FILE* fp = NULL;
     struct USERDATA user = {0};
@@ -135,11 +157,17 @@ int LoadList(char* _sFileName)
     fp = fopen(_sFileName, "rb");
 
     if (!fp) return 0;
+    ReleaseListItem(_pSelf); // 여기서 일단 내용물을 다 비운다.
+
+    while (fread(&user, sizeof(struct USERDATA), 1, fp))
+    {
+
+    }
 
     return 0;
 }
 
-int SaveList(char* _sInChar)
+int SaveList(struct SAddressBook* _pSelf, char* _sInChar)
 {
     return 0;
 }

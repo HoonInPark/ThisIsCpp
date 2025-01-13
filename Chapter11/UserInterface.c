@@ -17,9 +17,7 @@
 
 int InitAddressBook()
 {
-    // 동적할당 필요 없다. 이 스코프 바깥으로 해당 포인터가 벗어날 일이 없기에.
-    struct SAddressBook SingleAddressBook;
-    struct SAddressBook* pSelf = &SingleAddressBook;
+    struct SAddressBook* pSelf = CreateList();
     pSelf->m_HeadNode = NULL;
 
     int ReturnCode;
@@ -28,12 +26,18 @@ int InitAddressBook()
         system("clear");
         PrintMenu();
         ReturnCode = ProcessMenuInput(pSelf);
-        if (1 == ReturnCode) return 1;
-        else if (0 == ReturnCode) return 0;
+        if (1 == ReturnCode) break;
+        else if (0 == ReturnCode) break;
     }
 
-    // 정상 종료되면 리턴 0
-    return 0;
+    if (pSelf)
+    {
+        ReleaseListItem(pSelf);
+        free(pSelf);
+
+        return ReturnCode;
+    }
+    else return 0;
 }
 
 void PrintMenu()
