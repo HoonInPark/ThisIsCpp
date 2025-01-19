@@ -152,17 +152,21 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
 int LoadList(struct SAddressBook* _pSelf, char* _sFileName)
 {
     FILE* fp = NULL;
-    struct USERDATA user = {0};
+    struct USERDATA UserDataBuff = {0};
 
     fp = fopen(_sFileName, "rb");
 
     if (!fp) return 0;
     ReleaseListItem(_pSelf); // 여기서 일단 내용물을 다 비운다.
 
-    while (fread(&user, sizeof(struct USERDATA), 1, fp))
+    while (fread(&UserDataBuff, sizeof(struct USERDATA), 1, fp))
     {
-
+        struct USERDATA* pUserData = CreateNode(_pSelf, UserDataBuff.m_sUserName, UserDataBuff.m_sUserPhoneNum);
+        if (pUserData)
+            AddNode(_pSelf, pUserData);
     }
+
+    fclose(fp);
 
     return 0;
 }
