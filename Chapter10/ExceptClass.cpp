@@ -26,7 +26,7 @@ int main()
     try
     {
         int nInput = 0;
-        cout << "양의 정수를 입력하세요 : ";
+        cout << "input positive int : ";
         cin >> nInput;
 
         if (nInput < 0)
