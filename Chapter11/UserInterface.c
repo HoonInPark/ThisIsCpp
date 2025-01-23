@@ -23,7 +23,7 @@ int InitAddressBook()
     int ReturnCode;
     for (;;)
     {
-        system("clear");
+        // system("clear");
         PrintMenu();
         ReturnCode = ProcessMenuInput(pSelf);
         if (1 == ReturnCode) break;

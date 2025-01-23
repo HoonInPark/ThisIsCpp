@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/
+cmake_ninja_workdir = /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/build/
 # =============================================================================
 # Object build statements for EXECUTABLE target AddressBook
 
@@ -51,25 +51,25 @@ build cmake_object_order_depends_target_AddressBook: phony || .
 
 build CMakeFiles/AddressBook.dir/AddressBook.c.o: C_COMPILER__AddressBook_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/AddressBook.c || cmake_object_order_depends_target_AddressBook
   DEP_FILE = CMakeFiles/AddressBook.dir/AddressBook.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/AddressBook.dir
   OBJECT_FILE_DIR = CMakeFiles/AddressBook.dir
 
 build CMakeFiles/AddressBook.dir/DataManager.c.o: C_COMPILER__AddressBook_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/DataManager.c || cmake_object_order_depends_target_AddressBook
   DEP_FILE = CMakeFiles/AddressBook.dir/DataManager.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/AddressBook.dir
   OBJECT_FILE_DIR = CMakeFiles/AddressBook.dir
 
 build CMakeFiles/AddressBook.dir/LinkedList.c.o: C_COMPILER__AddressBook_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/LinkedList.c || cmake_object_order_depends_target_AddressBook
   DEP_FILE = CMakeFiles/AddressBook.dir/LinkedList.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/AddressBook.dir
   OBJECT_FILE_DIR = CMakeFiles/AddressBook.dir
 
 build CMakeFiles/AddressBook.dir/UserInterface.c.o: C_COMPILER__AddressBook_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/UserInterface.c || cmake_object_order_depends_target_AddressBook
   DEP_FILE = CMakeFiles/AddressBook.dir/UserInterface.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/AddressBook.dir
   OBJECT_FILE_DIR = CMakeFiles/AddressBook.dir
 
@@ -100,13 +100,13 @@ build cmake_object_order_depends_target_AddressBook_OOP: phony || .
 
 build CMakeFiles/AddressBook_OOP.dir/AddressBook_OOP.cpp.o: CXX_COMPILER__AddressBook_OOP_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/AddressBook_OOP.cpp || cmake_object_order_depends_target_AddressBook_OOP
   DEP_FILE = CMakeFiles/AddressBook_OOP.dir/AddressBook_OOP.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/AddressBook_OOP.dir
   OBJECT_FILE_DIR = CMakeFiles/AddressBook_OOP.dir
 
 build CMakeFiles/AddressBook_OOP.dir/USERDATA.cpp.o: CXX_COMPILER__AddressBook_OOP_unscanned_Debug /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/USERDATA.cpp || cmake_object_order_depends_target_AddressBook_OOP
   DEP_FILE = CMakeFiles/AddressBook_OOP.dir/USERDATA.cpp.o.d
-  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
   OBJECT_DIR = CMakeFiles/AddressBook_OOP.dir
   OBJECT_FILE_DIR = CMakeFiles/AddressBook_OOP.dir
 
@@ -131,7 +131,7 @@ build AddressBook_OOP: CXX_EXECUTABLE_LINKER__AddressBook_OOP_Debug CMakeFiles/A
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug && /opt/homebrew/bin/ccmake -S/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11 -B/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug
+  COMMAND = cd /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/build && /opt/homebrew/bin/ccmake -S/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11 -B/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -143,7 +143,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug && /opt/homebrew/bin/cmake --regenerate-during-build -S/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11 -B/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug
+  COMMAND = cd /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/build && /opt/homebrew/bin/cmake --regenerate-during-build -S/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11 -B/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -159,7 +159,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug
+# Folder: /Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/build
 
 build all: phony AddressBook AddressBook_OOP
 
