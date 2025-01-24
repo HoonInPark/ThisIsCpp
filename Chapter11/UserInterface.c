@@ -18,8 +18,10 @@
 
 int InitAddressBook()
 {
-    struct SAddressBook* pSelf = CreateList();
+    struct SAddressBook *pSelf = CreateList();
     pSelf->m_HeadNode = NULL;
+
+    LoadList(pSelf, "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/Address.dat");
 
     int ReturnCode;
     for (;;)
@@ -27,8 +29,10 @@ int InitAddressBook()
         // system("clear");
         PrintMenu();
         ReturnCode = ProcessMenuInput(pSelf);
-        if (1 == ReturnCode) break;
-        else if (0 == ReturnCode) break;
+        if (1 == ReturnCode)
+            break;
+        else if (0 == ReturnCode)
+            break;
     }
 
     if (pSelf)
@@ -36,9 +40,12 @@ int InitAddressBook()
         ReleaseListItem(pSelf);
         free(pSelf);
 
+        SaveList(pSelf, "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/Address.dat");
+
         return ReturnCode;
     }
-    else return 0;
+    else
+        return 0;
 }
 
 void PrintMenu()
@@ -51,9 +58,10 @@ void PrintMenu()
     printf("\n 5. close \n");
 }
 
-int ProcessMenuInput(struct SAddressBook* _pSelf)
+int ProcessMenuInput(struct SAddressBook *_pSelf)
 {
-    if (!_pSelf) return 1;
+    if (!_pSelf)
+        return 1;
 
     printf("type : ");
     char cInput;
@@ -64,73 +72,74 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
 
     switch (cInput - 48)
     {
-        case 1:
+    case 1:
+    {
+        char sInput[64];
+        printf("type name or phone number : ");
+        scanf("%[^\n]s", sInput);
+        fflush(stdin);
+
+        struct USERDATA *pNodeTmp;
+        if (FindNode(_pSelf, sInput, NULL, &pNodeTmp))
+            ShowNodeInfo(_pSelf, pNodeTmp);
+        else
+            printf("can't find %s", sInput);
+
+        break;
+    }
+    case 2:
+    {
+        char sInputName[64], sInputNum[16];
+
+        printf("type name : ");
+        scanf("%[^\n]s", sInputName);
+        fflush(stdin);
+        printf("%s", sInputName);
+
+        printf("\ntype phone number : ");
+        scanf("%[^\n]s", sInputNum);
+        fflush(stdin);
+        printf("%s", sInputNum);
+
+        struct USERDATA *pNodeTmp = CreateNode(_pSelf, sInputName, sInputNum);
+        if (pNodeTmp)
+            AddNode(_pSelf, pNodeTmp);
+
+        break;
+    }
+    case 3:
+    {
+        struct USERDATA *pNodeTmp;
+        pNodeTmp = _pSelf->m_HeadNode;
+        for (;;)
         {
-            char sInput[64];
-            printf("type name or phone number : ");
-            scanf("%[^\n]s", sInput);
-            fflush(stdin);
-
-            struct USERDATA* pNodeTmp;
-            if (FindNode(_pSelf, sInput, NULL, &pNodeTmp))
-                ShowNodeInfo(_pSelf, pNodeTmp);
-            else
-                printf("can't find %s", sInput);
-
-            break;
-        }
-        case 2:
-        {
-            char sInputName[64], sInputNum[16];
-
-            printf("type name : ");
-            scanf("%[^\n]s", sInputName);
-            fflush(stdin);
-            printf("%s", sInputName);
-
-            printf("\ntype phone number : ");
-            scanf("%[^\n]s", sInputNum);
-            fflush(stdin);
-            printf("%s",  sInputNum);
-
-            struct USERDATA* pNodeTmp = CreateNode(_pSelf, sInputName, sInputNum);
-            if (pNodeTmp)
-                AddNode(_pSelf, pNodeTmp);
-
-            break;
-        }
-        case 3:
-        {
-            struct USERDATA* pNodeTmp;
-            pNodeTmp = _pSelf->m_HeadNode;
-            for(;;)
-            {
-                if (!pNodeTmp) break;
-
-                ShowNodeInfo(_pSelf, pNodeTmp);
-                pNodeTmp = pNodeTmp->m_pNextNode;
-            }
-            break;
-        }
-        case 4:
-        {
-            char sInputName[64], sInputNum[16];
-            printf("type name : ");
-            scanf("%sInputName", sInputName);
-            fflush(stdin);
-
-            if (!DelNode(_pSelf, sInputName))
+            if (!pNodeTmp)
                 break;
 
-            break;
+            ShowNodeInfo(_pSelf, pNodeTmp);
+            pNodeTmp = pNodeTmp->m_pNextNode;
         }
-        case 5:
-        {
-            return 0;
+        break;
+    }
+    case 4:
+    {
+        char sInputName[64], sInputNum[16];
+        printf("type name : ");
+        scanf("%sInputName", sInputName);
+        fflush(stdin);
+
+        if (!DelNode(_pSelf, sInputName))
             break;
-        }
-        default:
-            break;
+
+        break;
+    }
+    case 5:
+    {
+        return 0;
+        break;
+    }
+    default:
+        break;
     }
 
     getchar();

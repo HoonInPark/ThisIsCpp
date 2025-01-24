@@ -22,4 +22,5 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
               struct USERDATA** _ppBeforeNode, struct USERDATA** _ppNodeFound);
 int LoadList(struct SAddressBook* _pSelf, char* _sFileName);
 int SaveList(struct SAddressBook* _pSelf, char* _sInChar);
+
 #endif //CHAPTER11_DATAMANAGER_H

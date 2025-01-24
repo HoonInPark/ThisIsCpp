@@ -25,7 +25,7 @@ void ReleaseListItem(struct SAddressBook* _pSelf)
 {
     struct USERDATA* pNodeTmp = _pSelf->m_HeadNode;
 
-    while (!pNodeTmp)
+    while (pNodeTmp)
     {
         pNodeTmp = FreeNode(_pSelf, pNodeTmp);
     }
@@ -156,7 +156,7 @@ int LoadList(struct SAddressBook* _pSelf, char* _sFileName)
 
     fp = fopen(_sFileName, "rb");
 
-    if (!fp) return 0;
+    if (fp == NULL) return 0;
     ReleaseListItem(_pSelf); // 여기서 일단 내용물을 다 비운다.
 
     while (fread(&UserDataBuff, sizeof(struct USERDATA), 1, fp))
