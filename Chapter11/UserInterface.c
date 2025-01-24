@@ -37,10 +37,10 @@ int InitAddressBook()
 
     if (pSelf)
     {
+        SaveList(pSelf, "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/Address.dat");
+        
         ReleaseListItem(pSelf);
         free(pSelf);
-
-        SaveList(pSelf, "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/Address.dat");
 
         return ReturnCode;
     }
