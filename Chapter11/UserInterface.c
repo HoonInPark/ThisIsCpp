@@ -13,6 +13,7 @@
  * 2. case 2에서 사용자 입력이 정상적으로 안되는 문제. -> 지금은 Find 함수가 안되는 중
  * 3. 그리고 입력 버퍼? 얘 뭐 하는 애인가? -> <C 프로그래밍> 100p 참조. v
  * 3. 왜 또 입력이 안되지? -> 한글 자판으로 쳐서! v
+ * 4. 왜 선택하고자 하는 옵션이 나타나지 않지? v
  * */
 
 int InitAddressBook()
@@ -54,12 +55,10 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
 {
     if (!_pSelf) return 1;
 
-    system("clear");
-
     printf("type : ");
     char cInput;
-    cInput = getchar();
-//    scanf("%cInput", &cInput);
+
+    scanf("%cInput", &cInput);
     fflush(stdin);
     printf("\n");
 
@@ -133,6 +132,8 @@ int ProcessMenuInput(struct SAddressBook* _pSelf)
         default:
             break;
     }
+
+    getchar();
 
     return -1;
 }
