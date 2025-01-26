@@ -16,12 +16,14 @@
  * 4. 왜 선택하고자 하는 옵션이 나타나지 않지? v
  * */
 
+#define DATA_FILE_NAME "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/Address.dat"
+
 int InitAddressBook()
 {
     struct SAddressBook *pSelf = CreateList();
     pSelf->m_HeadNode = NULL;
 
-    LoadList(pSelf, "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/Address.dat");
+    LoadList(pSelf, DATA_FILE_NAME);
 
     int ReturnCode;
     for (;;)
@@ -37,7 +39,7 @@ int InitAddressBook()
 
     if (pSelf)
     {
-        SaveList(pSelf, "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/Address.dat");
+        SaveList(pSelf, DATA_FILE_NAME);
         
         ReleaseListItem(pSelf);
         free(pSelf);

@@ -7,8 +7,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define DATA_FILE_NAME "Address.dat"
-
 struct SAddressBook* CreateList()
 {
     struct SAddressBook* pRetList = (struct SAddressBook*) malloc(sizeof(struct SAddressBook));
