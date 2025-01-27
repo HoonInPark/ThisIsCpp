@@ -176,7 +176,7 @@ int SaveList(struct SAddressBook* _pSelf, char* _sFileName)
     if (!_pSelf || !_sFileName) return -1;
 
     FILE* pFile = fopen(_sFileName, "w");
-    if (!pFile) return -1;
+    if (!pFile) return 0;
 
     USERDATA* pNode = _pSelf->m_HeadNode;
     while (pNode)
@@ -188,58 +188,3 @@ int SaveList(struct SAddressBook* _pSelf, char* _sFileName)
     fclose(pFile);
     return 0;
 }
-
-#if 0 // WRONG_CODE_OF_MINE
-
-int LoadList(struct SAddressBook* _pSelf, char* _sFileName)
-{
-    FILE* fp = NULL;
-    USERDATA UserDataBuff = {0};
-
-    fp = fopen(_sFileName, "rb");
-
-    if (fp == NULL) return 0;
-    ReleaseListItem(_pSelf); // 여기서 일단 내용물을 다 비운다.
-
-    while (1 == fread(&UserDataBuff, sizeof(USERDATA), 1, fp))
-    {
-        USERDATA* pUserData = CreateNode(_pSelf, UserDataBuff.m_sUserName, UserDataBuff.m_sUserPhoneNum);
-        if (pUserData)
-            AddNode(_pSelf, pUserData);
-    }
-
-    fclose(fp);
-
-    return 0;
-}
-
-int SaveList(struct SAddressBook* _pSelf, char* _sInChar)
-{
-    FILE* fp = NULL;
-
-    USERDATA* pTmp = _pSelf->m_HeadNode;
-
-    fp = fopen(_sInChar, "wb");
-
-    if (fp == NULL)
-    {
-        printf("cannot open list file with wb mode");
-        getchar();
-
-        return 1;
-    }
-
-    while (pTmp != NULL)
-    {
-        if (1 != fwrite(pTmp, sizeof(USERDATA), 1, fp))
-            printf("failed to save data");
-
-        pTmp = pTmp->m_pNextNode;
-    }
-
-    fclose(fp);
-
-    return 0;
-}
-
-#endif
