@@ -81,7 +81,7 @@ int ProcessMenuInput(struct SAddressBook *_pSelf)
         scanf("%[^\n]s", sInput);
         fflush(stdin);
 
-        struct USERDATA *pNodeTmp;
+        USERDATA* pNodeTmp;
         if (FindNode(_pSelf, sInput, NULL, &pNodeTmp))
             ShowNodeInfo(_pSelf, pNodeTmp);
         else
@@ -103,7 +103,7 @@ int ProcessMenuInput(struct SAddressBook *_pSelf)
         fflush(stdin);
         printf("%s", sInputNum);
 
-        struct USERDATA *pNodeTmp = CreateNode(_pSelf, sInputName, sInputNum);
+        USERDATA *pNodeTmp = CreateNode(_pSelf, sInputName, sInputNum);
         if (pNodeTmp)
             AddNode(_pSelf, pNodeTmp);
 
@@ -111,7 +111,7 @@ int ProcessMenuInput(struct SAddressBook *_pSelf)
     }
     case 3:
     {
-        struct USERDATA *pNodeTmp;
+        USERDATA *pNodeTmp;
         pNodeTmp = _pSelf->m_HeadNode;
         for (;;)
         {

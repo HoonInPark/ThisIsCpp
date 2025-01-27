@@ -5,17 +5,18 @@
 #ifndef CHAPTER11_LINKEDLIST_H
 #define CHAPTER11_LINKEDLIST_H
 
-struct USERDATA
+struct SNode
 {
     char* m_sUserName;
     char* m_sUserPhoneNum;
 
-    struct USERDATA* m_pNextNode;
+    struct SNode* m_pNextNode;
 };
+typedef struct SNode USERDATA;
 
 struct SAddressBook
 {
-    struct USERDATA* m_HeadNode;
+    USERDATA* m_HeadNode;
 };
 
 #endif //CHAPTER11_LINKEDLIST_H

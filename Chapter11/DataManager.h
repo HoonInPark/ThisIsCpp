@@ -11,15 +11,15 @@
 struct SAddressBook* CreateList();
 void ReleaseListItem(struct SAddressBook* _pSelf);
 
-struct USERDATA* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum);
-bool ShowNodeInfo(struct SAddressBook* _pSelf, struct USERDATA* _pInNode);
-struct USERDATA* FreeNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode);
+USERDATA* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum);
+bool ShowNodeInfo(struct SAddressBook* _pSelf, USERDATA* _pInNode);
+USERDATA* FreeNode(struct SAddressBook* _pSelf, USERDATA* _pInNode);
 
-bool AddNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode);
+bool AddNode(struct SAddressBook* _pSelf, USERDATA* _pInNode);
 bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar);
 
 bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
-              struct USERDATA** _ppBeforeNode, struct USERDATA** _ppNodeFound);
+              USERDATA** _ppBeforeNode, USERDATA** _ppNodeFound);
 int LoadList(struct SAddressBook* _pSelf, char* _sFileName);
 int SaveList(struct SAddressBook* _pSelf, char* _sInChar);
 

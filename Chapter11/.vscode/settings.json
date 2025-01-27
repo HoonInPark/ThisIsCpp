@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "stdc++.h": "c"
+        "stdc++.h": "c",
+        "userinterface.h": "c",
+        "datamanager.h": "c"
     }
 }

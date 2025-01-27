@@ -21,7 +21,7 @@ struct SAddressBook* CreateList()
 
 void ReleaseListItem(struct SAddressBook* _pSelf)
 {
-    struct USERDATA* pNodeTmp = _pSelf->m_HeadNode;
+    USERDATA* pNodeTmp = _pSelf->m_HeadNode;
 
     while (pNodeTmp)
     {
@@ -30,10 +30,10 @@ void ReleaseListItem(struct SAddressBook* _pSelf)
 }
 
 // 생성자... 같은 것
-struct USERDATA* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum)
+USERDATA* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName, const char* _sUserPhoneNum)
 {
     if (!_pSelf) return NULL;
-    struct USERDATA* pRetNode = (struct USERDATA*) malloc(sizeof(struct USERDATA));
+    USERDATA* pRetNode = (USERDATA*) malloc(sizeof(USERDATA));
     if (!pRetNode) return NULL;
 
     pRetNode->m_pNextNode = NULL;
@@ -51,7 +51,7 @@ struct USERDATA* CreateNode(struct SAddressBook* _pSelf, const char* _sUserName,
 }
 
 // 소멸자... 같은 것
-struct USERDATA* FreeNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode)
+USERDATA* FreeNode(struct SAddressBook* _pSelf, USERDATA* _pInNode)
 {
     if (!_pSelf) return NULL;
     if (!_pInNode) return NULL;
@@ -62,7 +62,7 @@ struct USERDATA* FreeNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode
     return _pInNode->m_pNextNode;
 }
 
-bool ShowNodeInfo(struct SAddressBook* _pSelf, struct USERDATA* _pInNode)
+bool ShowNodeInfo(struct SAddressBook* _pSelf, USERDATA* _pInNode)
 {
     if (!_pSelf) return false;
     if (!_pInNode) return false;
@@ -72,7 +72,7 @@ bool ShowNodeInfo(struct SAddressBook* _pSelf, struct USERDATA* _pInNode)
     return true;
 }
 
-bool AddNode(struct SAddressBook* _pSelf, struct USERDATA* _pInNode)
+bool AddNode(struct SAddressBook* _pSelf, USERDATA* _pInNode)
 {
     if (!_pSelf || !_pInNode) return false;
 
@@ -98,8 +98,8 @@ bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
     if (!_pSelf) return false;
     if (!_pSelf->m_HeadNode) return false;
 
-    struct USERDATA* pBeforeNode = NULL;
-    struct USERDATA* pNodeFound = NULL;
+    USERDATA* pBeforeNode = NULL;
+    USERDATA* pNodeFound = NULL;
     if (FindNode(_pSelf, _sInChar, &pBeforeNode, &pNodeFound))
     {
         if (!pBeforeNode) // 만약 pBeforeNode가 NULL이면 pNodeFound는 m_HeadNode일 것.
@@ -119,13 +119,13 @@ bool DelNode(struct SAddressBook* _pSelf, const char* _sInChar)
 }
 
 bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
-              struct USERDATA** _ppBeforeNode, struct USERDATA** _ppNodeFound)
+              USERDATA** _ppBeforeNode, USERDATA** _ppNodeFound)
 {
     if (!_pSelf) return false;
-    struct USERDATA* pNodeTmp = _pSelf->m_HeadNode;
+    USERDATA* pNodeTmp = _pSelf->m_HeadNode;
     if (!pNodeTmp) return false;
 
-    struct USERDATA* pBeforeNodeTmp = NULL;
+    USERDATA* pBeforeNodeTmp = NULL;
     for (;;)
     {
         if (strcmp(pNodeTmp->m_sUserName, _sInChar) == 0 ||
@@ -150,16 +150,16 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
 int LoadList(struct SAddressBook* _pSelf, char* _sFileName)
 {
     FILE* fp = NULL;
-    struct USERDATA UserDataBuff = {0};
+    USERDATA UserDataBuff = {0};
 
     fp = fopen(_sFileName, "rb");
 
     if (fp == NULL) return 0;
     ReleaseListItem(_pSelf); // 여기서 일단 내용물을 다 비운다.
 
-    while (fread(&UserDataBuff, sizeof(struct USERDATA), 1, fp))
+    while (1 == fread(&UserDataBuff, sizeof(USERDATA), 1, fp))
     {
-        struct USERDATA* pUserData = CreateNode(_pSelf, UserDataBuff.m_sUserName, UserDataBuff.m_sUserPhoneNum);
+        USERDATA* pUserData = CreateNode(_pSelf, UserDataBuff.m_sUserName, UserDataBuff.m_sUserPhoneNum);
         if (pUserData)
             AddNode(_pSelf, pUserData);
     }
@@ -173,7 +173,7 @@ int SaveList(struct SAddressBook* _pSelf, char* _sInChar)
 {
     FILE* fp = NULL;
 
-    struct USERDATA* pTmp = _pSelf->m_HeadNode;
+    USERDATA* pTmp = _pSelf->m_HeadNode;
 
     fp = fopen(_sInChar, "wb");
 
@@ -187,7 +187,7 @@ int SaveList(struct SAddressBook* _pSelf, char* _sInChar)
 
     while (pTmp != NULL)
     {
-        if (1 != fwrite(pTmp, sizeof(struct USERDATA), 1, fp))
+        if (1 != fwrite(pTmp, sizeof(USERDATA), 1, fp))
             printf("failed to save data");
 
         pTmp = pTmp->m_pNextNode;

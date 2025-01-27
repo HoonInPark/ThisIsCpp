@@ -23,7 +23,9 @@ int main()
 {
     return InitAddressBook();
 }
-#else // 일단 기본적인 예제가 제대로 동작하는지 확인해 보는 것부터 다시 시작해 보는 걸로!
+
+// 일단 기본적인 예제가 제대로 동작하는지 확인해 보는 것부터 다시 시작해 보는 걸로!
+#elif 0
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,8 +42,8 @@ int main()
 {
     int i;
     PERSON user;
-    FILE* fp = fopen(
-        "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/Address.dat", 
+    FILE *fp = fopen(
+        "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/Address.dat",
         "wb");
 
     if (NULL == fp)
@@ -49,20 +51,62 @@ int main()
         printf("file open error! \n");
         exit(1);
     }
-    
+
     printf(">> type user info (num of %d)", SIZE);
     for (int i = 0; i < SIZE; i++)
     {
-        printf("\n%d. name : ", i + 1) ; gets(user.name);
-        printf("    sex : "); gets(user.gender);
-        printf("    age : "); scanf("%d", &user.age);
+        printf("\n%d. name : ", i + 1);
+        gets(user.name);
+        printf("    sex : ");
+        gets(user.gender);
+        printf("    age : ");
+        scanf("%d", &user.age);
 
         fwrite(&user, sizeof(PERSON), 1, fp);
         fflush(stdin);
     }
-    
+
     fclose(fp);
     printf("\n==file output success==\n");
 }
-#endif
 
+#elif 1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct person
+{
+    char name[7], gender[3];
+    int age;
+};
+typedef struct person PERSON;
+
+int main()
+{
+    int i;
+    PERSON user;
+
+    FILE *fp = fopen(
+        "/Users/changjoonlee/Documents/Cpp/ThisIsCpp/Chapter11/cmake-build-debug/Address.dat",
+        "rb");
+
+    if (NULL == fp)
+    {
+        printf("file open error! \n");
+        exit(1);
+    }
+
+    puts("----------------------------------");
+    puts("  name    sex    age  ");
+    puts("----------------------------------");
+
+    while (1 == fread(&user, sizeof(PERSON), 1, fp))
+    {
+        printf("%-8s %-3s %4d\n", user.name, user.gender, user.age);
+    }
+    puts("----------------------------------");
+    fclose(fp);
+}
+
+#endif
