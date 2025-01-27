@@ -149,6 +149,50 @@ bool FindNode(struct SAddressBook* _pSelf, const char* _sInChar,
 
 int LoadList(struct SAddressBook* _pSelf, char* _sFileName)
 {
+    if (!_pSelf || !_sFileName) return -1;
+
+    FILE* pFile = fopen(_sFileName, "r");
+    if (!pFile) return -1;
+
+    char sUserName[100];
+    char sUserPhoneNum[100];
+    while (fscanf(pFile, "%s %s", sUserName, sUserPhoneNum) != EOF)
+    {
+        USERDATA* pNode = CreateNode(_pSelf, sUserName, sUserPhoneNum);
+        if (!pNode)
+        {
+            fclose(pFile);
+            return -1;
+        }
+        AddNode(_pSelf, pNode);
+    }
+
+    fclose(pFile);
+    return 0;
+}
+
+int SaveList(struct SAddressBook* _pSelf, char* _sFileName)
+{
+    if (!_pSelf || !_sFileName) return -1;
+
+    FILE* pFile = fopen(_sFileName, "w");
+    if (!pFile) return -1;
+
+    USERDATA* pNode = _pSelf->m_HeadNode;
+    while (pNode)
+    {
+        fprintf(pFile, "%s %s\n", pNode->m_sUserName, pNode->m_sUserPhoneNum);
+        pNode = pNode->m_pNextNode;
+    }
+
+    fclose(pFile);
+    return 0;
+}
+
+#if 0 // WRONG_CODE_OF_MINE
+
+int LoadList(struct SAddressBook* _pSelf, char* _sFileName)
+{
     FILE* fp = NULL;
     USERDATA UserDataBuff = {0};
 
@@ -197,3 +241,5 @@ int SaveList(struct SAddressBook* _pSelf, char* _sInChar)
 
     return 0;
 }
+
+#endif
