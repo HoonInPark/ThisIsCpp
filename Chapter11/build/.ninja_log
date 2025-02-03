@@ -1,9 +1,0 @@
-# ninja log v6
-1	25	1737616887743205868	CMakeFiles/AddressBook.dir/LinkedList.c.o	ac99983f6836e25e
-2	28	1737616887743590860	CMakeFiles/AddressBook_OOP.dir/USERDATA.cpp.o	bb1f9b913e8a38e9
-1	38	1737616887743341323	CMakeFiles/AddressBook.dir/UserInterface.c.o	222b432aeebf7c53
-1	32	1737616887742839250	CMakeFiles/AddressBook.dir/AddressBook.c.o	f2caaddba9bb07ab
-1	667	1737616887743468571	CMakeFiles/AddressBook_OOP.dir/AddressBook_OOP.cpp.o	f2fbd4428ab5e98a
-38	69	1737616887779851155	AddressBook	5f5647c2a51b733a
-1	35	1737616887743072037	CMakeFiles/AddressBook.dir/DataManager.c.o	4d87ecc386daa5fb
-668	703	1737616888410078520	AddressBook_OOP	99b75aa5a4b766aa

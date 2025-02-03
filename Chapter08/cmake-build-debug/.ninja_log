@@ -1,9 +1,0 @@
-# ninja log v6
-599	630	1732346377887565957	FriendFunction	375e43cd90241ca1
-715	754	1732359660774703523	FriendClass	70bf30cfd6bbaed5
-6	713	1732428375322282125	CMakeFiles/CompositionSample.dir/CompositionSample.cpp.o	58166a1280044c24
-4	715	1732359660063785266	CMakeFiles/FriendClass.dir/FriendClass.cpp.o	614923908e05acd8
-4	599	1732346377292874878	CMakeFiles/FriendFunction.dir/FriendFunction.cpp.o	50f6a48c8d64a167
-713	753	1732428376029745287	CompositionSample	8c56e2ba382098bf
-5	814	1732576075853453563	CMakeFiles/AggregationSample.dir/AggregationSample.cpp.o	ba331e4fa5ee5922
-814	934	1732576076662703724	AggregationSample	d26714bacc0f6f3a

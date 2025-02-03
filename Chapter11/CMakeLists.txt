@@ -11,5 +11,7 @@ add_executable(AddressBook AddressBook.c
         UserInterface.h
         UserInterface.c)
 add_executable(AddressBook_OOP AddressBook_OOP.cpp
-        USERDATA.h
-        USERDATA.cpp)
+        LinkedList_OOP.h
+        LinkedList_OOP.cpp
+        UserInterface_OOP.h
+        UserInterface_OOP.cpp)
