@@ -84,4 +84,6 @@ int main()
     b = TestFunc(20);
     cout << "* After  ******************" << endl;
     CTestData c(b);
+
+    return EXIT_SUCCESS;
 }

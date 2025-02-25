@@ -50,4 +50,6 @@ int main()
 
     cout << "a : " << a.GetData() << endl;
     cout << "************* End *************" << endl;
+
+    return EXIT_SUCCESS;
 }

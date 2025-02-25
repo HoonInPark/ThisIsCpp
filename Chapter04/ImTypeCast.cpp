@@ -4,8 +4,8 @@
 #include "bits/stdc++.h"
 using namespace std;
 
-#define ADDING_DISTRUCTOR 0
-#define MODIFY_TEST_FUNC_PARAM 0
+#define ADDING_DISTRUCTOR 1
+#define MODIFY_TEST_FUNC_PARAM 1
 #define PREVENT_IMPLICIT_CONV_CONSTRUCTOR 0
 
 class CTestData
@@ -34,11 +34,11 @@ private:
 
 void TestFunc(
 #if !MODIFY_TEST_FUNC_PARAM
-        CTestData param
+    CTestData param
 #else
-        const CTestData& param
+    const CTestData& param
 #endif
-        )
+)
 {
     cout << "TestFunc() : " << param.GetData() << endl;
 }
@@ -63,4 +63,6 @@ int main()
 #if ADDING_DISTRUCTOR
     cout << "************* End *************" << endl;
 #endif
+
+    return EXIT_SUCCESS;
 }
